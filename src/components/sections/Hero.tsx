@@ -8,7 +8,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-500 text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
-            Open Source • MIT License • Beta Release
+            Open Source • Apache 2.0 • Beta Release
           </div>
 
           {/* Main Heading */}
@@ -60,7 +60,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-500 mb-2">
-                MIT
+                Apache 2.0
               </div>
               <div className="text-gray-600">Open Source</div>
             </div>

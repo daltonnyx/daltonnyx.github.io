@@ -100,7 +100,7 @@ const Features = () => {
             Powerful Features for Modern AI Workflows
           </h2>
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <span className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold text-sm">MIT License</span>
+            <span className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold text-sm">Apache 2.0</span>
             <span className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold text-sm">Status: Beta</span>
             <span className="inline-flex items-center bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full font-semibold text-sm">Enterprise-Grade</span>
           </div>
