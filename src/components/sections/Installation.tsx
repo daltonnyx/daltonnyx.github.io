@@ -22,10 +22,9 @@ const Installation = () => {
   };
 
   const quickInstallCommands = {
-    linux:
-      "curl -LsSf https://gist.githubusercontent.com/daltonnyx/aa45d64fd8fb6a084067d4012a5710a6/raw/116f24fe3d94f0c1a972da92cac2f278a59fdad6/install.sh | bash",
+    linux: "curl -LsSf https://agentcrew.dev/install.sh | bash",
     windows:
-      'powershell -ExecutionPolicy ByPass -c "irm https://gist.githubusercontent.com/daltonnyx/e2d9a4d371e095bfa07cf5246d7e0746/raw/af138f99ed5351dc59cae81143e058ef95b5fa37/install.ps1 | iex"',
+      'powershell -ExecutionPolicy ByPass -c "irm https://agentcrew.dev/install.ps1 | iex"',
   };
 
   const standardCommands = [
@@ -184,14 +183,6 @@ const Installation = () => {
                       )}
                     </button>
                   </div>
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-start space-x-3">
-                    <AlertCircle className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                    <div className="text-sm text-yellow-800">
-                      <strong>Note:</strong> The Windows script is AI-generated
-                      and may need testing. Please provide feedback if you
-                      encounter issues.
-                    </div>
-                  </div>
                 </div>
               </div>
             )}
@@ -316,4 +307,3 @@ const Installation = () => {
 };
 
 export default Installation;
-
