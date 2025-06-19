@@ -13,16 +13,16 @@ const Footer = () => {
       { name: 'Security', href: '#security' }
     ],
     resources: [
-      { name: 'GitHub Repository', href: 'https://github.com/daltonnyx/AgentCrew', external: true },
-      { name: 'Documentation', href: 'https://github.com/daltonnyx/AgentCrew#readme', external: true },
-      { name: 'Examples', href: 'https://github.com/daltonnyx/AgentCrew/tree/main/examples', external: true },
-      { name: 'Issues & Support', href: 'https://github.com/daltonnyx/AgentCrew/issues', external: true }
+      { name: 'GitHub Repository', href: 'https://github.com/saigontechnology/AgentCrew', external: true },
+      { name: 'Documentation', href: 'https://github.com/saigontechnology/AgentCrew#readme', external: true },
+      { name: 'Examples', href: 'https://github.com/saigontechnology/AgentCrew/tree/main/examples', external: true },
+      { name: 'Issues & Support', href: 'https://github.com/saigontechnology/AgentCrew/issues', external: true }
     ],
     community: [
-      { name: 'Contribute', href: 'https://github.com/daltonnyx/AgentCrew/blob/main/CONTRIBUTING.md', external: true },
-      { name: 'Star on GitHub', href: 'https://github.com/daltonnyx/AgentCrew', external: true },
-      { name: 'Report Issues', href: 'https://github.com/daltonnyx/AgentCrew/issues/new', external: true },
-      { name: 'Feature Requests', href: 'https://github.com/daltonnyx/AgentCrew/issues/new', external: true }
+      { name: 'Contribute', href: 'https://github.com/saigontechnology/AgentCrew/blob/main/CONTRIBUTING.md', external: true },
+      { name: 'Star on GitHub', href: 'https://github.com/saigontechnology/AgentCrew', external: true },
+      { name: 'Report Issues', href: 'https://github.com/saigontechnology/AgentCrew/issues/new', external: true },
+      { name: 'Feature Requests', href: 'https://github.com/saigontechnology/AgentCrew/issues/new', external: true }
     ]
   }
 

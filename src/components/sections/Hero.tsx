@@ -36,7 +36,7 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
             <a
-              href="https://github.com/daltonnyx/AgentCrew"
+              href="https://github.com/saigontechnology/AgentCrew"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 font-semibold text-lg border border-gray-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -113,4 +113,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

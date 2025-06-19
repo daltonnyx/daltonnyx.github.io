@@ -1,95 +1,101 @@
-import { 
-  Code, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Lightbulb, 
+import {
+  Code,
+  FileText,
+  TrendingUp,
+  Users,
+  Lightbulb,
   Shield,
   ArrowRight,
-  CheckCircle
-} from 'lucide-react'
+  CheckCircle,
+} from "lucide-react";
 
 const UseCases = () => {
   const useCases = [
     {
       icon: <Code className="w-8 h-8" />,
       title: "Software Development",
-      description: "Accelerate development with specialized agents for code review, debugging, documentation, and testing.",
+      description:
+        "Accelerate development with specialized agents for code review, debugging, documentation, and testing.",
       benefits: [
         "Automated code reviews and suggestions",
-        "Bug detection and debugging assistance", 
+        "Bug detection and debugging assistance",
         "Documentation generation",
-        "Test case creation and validation"
+        "Test case creation and validation",
       ],
       color: "from-blue-500 to-cyan-500",
-      audience: "Developers & Engineering Teams"
+      audience: "Developers & Engineering Teams",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Business Analysis",
-      description: "Create comprehensive market research, competitive analysis, and strategic insights with research and analysis agents.",
+      description:
+        "Create comprehensive market research, competitive analysis, and strategic insights with research and analysis agents.",
       benefits: [
         "Market research and trend analysis",
         "Competitive intelligence gathering",
         "Data-driven strategic recommendations",
-        "Automated report generation"
+        "Automated report generation",
       ],
       color: "from-green-500 to-emerald-500",
-      audience: "Business Analysts & Strategists"
+      audience: "Business Analysts & Strategists",
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: "Content Creation",
-      description: "Streamline content workflows with agents specialized in research, writing, editing, and optimization.",
+      description:
+        "Streamline content workflows with agents specialized in research, writing, editing, and optimization.",
       benefits: [
         "Research-backed content creation",
         "Multi-format content adaptation",
         "SEO optimization and analysis",
-        "Editorial review and enhancement"
+        "Editorial review and enhancement",
       ],
       color: "from-purple-500 to-pink-500",
-      audience: "Content Teams & Marketers"
+      audience: "Content Teams & Marketers",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Customer Support",
-      description: "Enhance support operations with agents that can research, analyze, and provide comprehensive solutions.",
+      description:
+        "Enhance support operations with agents that can research, analyze, and provide comprehensive solutions.",
       benefits: [
         "Intelligent ticket analysis and routing",
         "Knowledge base integration",
         "Multi-language support capabilities",
-        "Escalation and follow-up automation"
+        "Escalation and follow-up automation",
       ],
       color: "from-orange-500 to-red-500",
-      audience: "Support Teams & Customer Success"
+      audience: "Support Teams & Customer Success",
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Research & Innovation",
-      description: "Accelerate research projects with agents that can gather information, analyze data, and synthesize insights.",
+      description:
+        "Accelerate research projects with agents that can gather information, analyze data, and synthesize insights.",
       benefits: [
         "Literature review and synthesis",
         "Data collection and analysis",
         "Hypothesis generation and testing",
-        "Research report compilation"
+        "Research report compilation",
       ],
       color: "from-indigo-500 to-purple-500",
-      audience: "Researchers & Innovation Teams"
+      audience: "Researchers & Innovation Teams",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Compliance & Security",
-      description: "Ensure regulatory compliance with agents that can review policies, analyze risks, and generate reports.",
+      description:
+        "Ensure regulatory compliance with agents that can review policies, analyze risks, and generate reports.",
       benefits: [
         "Policy review and compliance checking",
         "Risk assessment and mitigation",
         "Audit trail documentation",
-        "Regulatory reporting automation"
+        "Regulatory reporting automation",
       ],
       color: "from-red-500 to-pink-500",
-      audience: "Compliance & Security Teams"
-    }
-  ]
+      audience: "Compliance & Security Teams",
+    },
+  ];
 
   return (
     <section id="use-cases" className="py-20 bg-white">
@@ -100,22 +106,27 @@ const UseCases = () => {
             Transform Your Workflows with AI Teams
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
-            AgentCrew is for developers, analysts, content creators, support teams, researchers, and anyone building with AI. Create custom agent teams to automate, analyze, and innovate—no matter your domain.
+            AgentCrew is for developers, analysts, content creators, support
+            teams, researchers, and anyone building with AI. Create custom agent
+            teams to automate, analyze, and innovate—no matter your domain.
           </p>
           <p className="text-base text-gray-500 max-w-2xl mx-auto">
-            Discover how different teams and industries are leveraging AgentCrew to solve complex challenges and accelerate their work.
+            Discover how different teams and industries are leveraging AgentCrew
+            to solve complex challenges and accelerate their work.
           </p>
         </div>
 
         {/* Use Cases Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {useCases.map((useCase, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white rounded-2xl border border-gray-200 shadow-lg card-hover overflow-hidden"
             >
               {/* Header */}
-              <div className={`bg-gradient-to-r ${useCase.color} p-6 text-white`}>
+              <div
+                className={`bg-gradient-to-r ${useCase.color} p-6 text-white`}
+              >
                 <div className="flex items-center space-x-4 mb-3">
                   <div className="p-2 bg-white/20 rounded-lg">
                     {useCase.icon}
@@ -132,7 +143,9 @@ const UseCases = () => {
 
               {/* Benefits */}
               <div className="p-6">
-                <h4 className="font-semibold text-gray-900 mb-4">Key Benefits:</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">
+                  Key Benefits:
+                </h4>
                 <ul className="space-y-3">
                   {useCase.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
@@ -152,10 +165,10 @@ const UseCases = () => {
             Ready to Build Your Custom AI Workflow?
           </h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Join developers, analysts, and teams worldwide who are already using AgentCrew 
-            to transform their workflows and boost productivity.
+            Join developers, analysts, and teams worldwide who are already using
+            AgentCrew to transform their workflows and boost productivity.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#installation"
@@ -165,7 +178,7 @@ const UseCases = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
             <a
-              href="https://github.com/daltonnyx/AgentCrew"
+              href="https://github.com/saigontechnology/AgentCrew"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20"
@@ -177,7 +190,8 @@ const UseCases = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default UseCases
+export default UseCases;
+
