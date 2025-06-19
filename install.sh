@@ -3,7 +3,21 @@ set -e
 
 echo "Starting AgentCrew installation script..."
 
-# 1. Check if uv command exists
+# 1. Check if git is installed
+echo "Checking for Git..."
+if ! command -v git &>/dev/null; then
+  echo "ERROR: Git is not installed or not in your PATH."
+  echo "Please install Git before continuing. You can typically install it with:"
+  echo "  - For Debian/Ubuntu: sudo apt-get install git"
+  echo "  - For Fedora: sudo dnf install git"
+  echo "  - For macOS: brew install git (requires Homebrew)"
+  echo "After installation, restart your terminal and run this script again."
+  exit 1
+else
+  echo "Git is installed."
+fi
+
+# 2. Check if uv command exists
 echo "Checking for uv..."
 if ! command -v uv &>/dev/null; then
   echo "uv command not found. Attempting to install uv..."
@@ -69,7 +83,7 @@ echo "Note: This script uses 'uv tool install . --reinstall' as requested."
 echo "For some Python projects, 'uv pip install -e .' or 'uv pip install .' might be more common for installing dependencies and the project itself in editable mode."
 echo "Please verify this is the correct command for the AgentCrew project structure."
 
-if uv tool install --python=3.12 . --reinstall; then
+if uv tool install --with="cmake" --python=3.12 . --reinstall; then
   echo "Project dependencies installed successfully."
 else
   echo "ERROR: Failed to install project dependencies using uv."

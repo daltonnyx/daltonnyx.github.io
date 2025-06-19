@@ -7,7 +7,20 @@ Write-Host "Starting AgentCrew installation script for Windows..."
 $TempDir = $null
 
 try {
-    # 2. uv Prerequisite Check
+    # 2. Git Prerequisite Check
+    Write-Host "Checking for Git..."
+    $gitPath = Get-Command git -ErrorAction SilentlyContinue
+    
+    if ($null -eq $gitPath) {
+        Write-Error "ERROR: Git is not installed or not in your PATH."
+        Write-Host "Please install Git from https://git-scm.com/download/win before continuing."
+        Write-Host "After installation, restart your terminal and run this script again."
+        exit 1
+    } else {
+        Write-Host "Git is installed at $($gitPath.Source)"
+    }
+    
+    # 3. uv Prerequisite Check
     Write-Host "Checking for uv..."
     $uvPath = Get-Command uv -ErrorAction SilentlyContinue
 
