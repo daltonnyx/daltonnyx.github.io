@@ -86,7 +86,7 @@ const Installation = () => {
               className={cn(
                 "flex-1 px-6 py-4 text-center font-semibold transition-colors duration-200",
                 activeTab === 'quick'
-                  ? "bg-primary-50 text-primary-700 border-b-2 border-primary-600"
+                  ? "bg-primary-50 text-primary-500 border-b-2 border-primary-500"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
               )}
             >
@@ -98,7 +98,7 @@ const Installation = () => {
               className={cn(
                 "flex-1 px-6 py-4 text-center font-semibold transition-colors duration-200",
                 activeTab === 'standard'
-                  ? "bg-primary-50 text-primary-700 border-b-2 border-primary-600"
+                  ? "bg-primary-50 text-primary-500 border-b-2 border-primary-500"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
               )}
             >
@@ -181,7 +181,7 @@ const Installation = () => {
                 <div className="space-y-6">
                   {standardCommands.map((command, index) => (
                     <div key={index} className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                      <div className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-bold text-sm">
                         {index + 1}
                       </div>
                       <div className="flex-1 bg-gray-900 rounded-lg p-4 relative">
@@ -209,7 +209,7 @@ const Installation = () => {
 
         {/* Usage Examples */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="bg-gradient-to-r from-primary-600 to-accent-600 p-6 text-white">
+          <div className="bg-gradient-to-r from-primary-500 to-primary-700 p-6 text-white">
             <h3 className="text-xl font-bold mb-2 flex items-center">
               <Play className="w-6 h-6 mr-2" />
               Basic Usage

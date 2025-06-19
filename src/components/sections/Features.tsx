@@ -117,7 +117,7 @@ const Features = () => {
               className="bg-white p-6 rounded-xl border border-gray-200 card-hover shadow-sm"
             >
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary-100 text-primary-600 rounded-lg mr-4">
+                <div className="p-3 bg-primary-100 text-primary-500 rounded-lg mr-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900">
@@ -148,9 +148,9 @@ const Features = () => {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Get started with AgentCrew today and experience the power of collaborative AI agents.
             </p>
-            <a
+              <a
               href="#installation"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 font-semibold"
+              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors duration-200 font-semibold"
             >
               <Settings className="w-5 h-5 mr-2" />
               Start Building

@@ -1,30 +1,32 @@
 @import "tailwindcss";
 
-/* Custom theme variables for AgentCrew branding */
+/* Custom theme variables for AgentCrew branding - matching logo green #4ebc0b */
 @theme {
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
-  --color-primary-950: #082f49;
-  
-  --color-accent-50: #fdf4ff;
-  --color-accent-100: #fae8ff;
-  --color-accent-200: #f5d0fe;
-  --color-accent-300: #f0abfc;
-  --color-accent-400: #e879f9;
-  --color-accent-500: #d946ef;
-  --color-accent-600: #c026d3;
-  --color-accent-700: #a21caf;
-  --color-accent-800: #86198f;
-  --color-accent-900: #701a75;
-  --color-accent-950: #4a044e;
+  /* Green primary palette (based on logo #4ebc0b) */
+  --color-primary-50: #f0ffe6;
+  --color-primary-100: #ddffc7;
+  --color-primary-200: #befc94;
+  --color-primary-300: #96f55d;
+  --color-primary-400: #70e631;
+  --color-primary-500: #4ebc0b;  /* Logo green */
+  --color-primary-600: #3e9909;
+  --color-primary-700: #2e7309;
+  --color-primary-800: #245c0c;
+  --color-primary-900: #1d4d0c;
+  --color-primary-950: #0a2a00;
+
+  /* Dark accent palette (complements the black from logo) */
+  --color-accent-50: #f7f7f7;
+  --color-accent-100: #e3e3e3;
+  --color-accent-200: #c8c8c8;
+  --color-accent-300: #a4a4a4;
+  --color-accent-400: #818181;
+  --color-accent-500: #666666;
+  --color-accent-600: #515151;
+  --color-accent-700: #434343;
+  --color-accent-800: #383838;
+  --color-accent-900: #212121;
+  --color-accent-950: #121212;
 }
 
 /* Base styles */
@@ -44,14 +46,14 @@
 /* Component styles */
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, var(--color-primary-600), var(--color-accent-600));
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .gradient-bg {
-    background: linear-gradient(135deg, var(--color-primary-50), var(--color-accent-50));
+    background: linear-gradient(135deg, var(--color-primary-50), var(--color-primary-100));
   }
   
   .card-hover {

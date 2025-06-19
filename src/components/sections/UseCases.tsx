@@ -159,7 +159,7 @@ const UseCases = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#installation"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Started Now
               <ArrowRight className="w-5 h-5 ml-2" />

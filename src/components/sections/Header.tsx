@@ -35,7 +35,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium"
+                className="text-gray-600 hover:text-primary-500 transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -57,7 +57,7 @@ const Header = () => {
               href="https://github.com/daltonnyx/AgentCrew"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-medium flex items-center space-x-2"
+              className="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 font-medium flex items-center space-x-2"
             >
               <Star className="w-4 h-4" />
               <span>Star on GitHub</span>
@@ -103,7 +103,7 @@ const Header = () => {
                 href="https://github.com/daltonnyx/AgentCrew"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-medium"
+                className="inline-flex items-center space-x-2 bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 font-medium"
               >
                 <Star className="w-4 h-4" />
                 <span>Star on GitHub</span>
