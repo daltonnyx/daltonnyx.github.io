@@ -99,9 +99,11 @@ const UseCases = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Transform Your Workflows with AI Teams
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how different teams and industries are leveraging AgentCrew 
-            to solve complex challenges and accelerate their work.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            AgentCrew is for developers, analysts, content creators, support teams, researchers, and anyone building with AI. Create custom agent teams to automate, analyze, and innovate—no matter your domain.
+          </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
+            Discover how different teams and industries are leveraging AgentCrew to solve complex challenges and accelerate their work.
           </p>
         </div>
 

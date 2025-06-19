@@ -65,9 +65,11 @@ const Security = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Built with Security and Control in Mind
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            AgentCrew prioritizes user control and security, ensuring you maintain 
-            complete oversight of your AI agents and their actions.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            AgentCrew prioritizes user control and security. You approve every tool call, set explicit permissions, and define secure agent boundaries—giving you oversight over all actions and data access.
+          </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
+            <strong>Never put secrets in prompts or agent configs.</strong> Review permissions and tool settings carefully to avoid leaks or unintended actions.
           </p>
         </div>
 

@@ -9,7 +9,10 @@ import {
   Search,
   Brain,
   FileText,
-  CheckCircle
+  CheckCircle,
+  RefreshCcw,
+  Sparkles,
+  Zap
 } from 'lucide-react'
 
 const Features = () => {
@@ -17,56 +20,74 @@ const Features = () => {
     {
       icon: <Bot className="w-8 h-8" />,
       title: "Wide AI Model Support",
-      description: "Works with Anthropic Claude, Google Gemini, OpenAI GPT, Groq, DeepInfra, and GitHub Copilot. Switch between providers seamlessly.",
-      highlights: ["6+ AI Providers", "GitHub Copilot", "Custom Providers"]
+      description: "Works with OpenAI GPT, Anthropic Claude, Google Gemini, GitHub Copilot, Groq, DeepInfra, and custom providers. Switch models anytime.",
+      highlights: ["6+ AI Providers", "GitHub Copilot", "Customizable"]
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Strong Agent Capabilities",
-      description: "Define multiple AI agents with specialized expertise. Agents can intelligently transfer tasks to each other when needed.",
-      highlights: ["Multi-Agent System", "Task Transfer", "Custom Prompts"]
+      title: "Expert Agent Teams",
+      description: "Define multiple AI agents, each with specialized expertise. Agents can intelligently transfer tasks for maximum efficiency.",
+      highlights: ["Multi-Agent System", "Smart Task Sharing", "Custom Prompts"]
+    },
+    {
+      icon: <Sparkles className="w-8 h-8" />,
+      title: "Adaptive Behaviors",
+      description: "Personalize agents using powerful 'when...do...' rules. Agents learn, adapt, and apply rules for smarter interactions over time.",
+      highlights: ["Behavioral Rules", "Personalization", "Continuous Improvement"]
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Streaming Responses",
+      description: "Get real-time, live responses from AI agents so you see answers as they are generated.",
+      highlights: ["Real-Time Output", "Faster Feedback", "Enhanced UX"]
+    },
+    {
+      icon: <RefreshCcw className="w-8 h-8" />,
+      title: "Rollback & Consolidate",
+      description: "Easily revert to previous chat states or merge multiple messages for streamlined conversations.",
+      highlights: ["Rollback Messages", "Consolidate Chats", "Flexible History"]
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Tool Call Approval",
-      description: "You decide if an agent can use a tool. AgentCrew asks for your permission before any tool is executed, giving you complete control.",
-      highlights: ["User Control", "Security First", "Permission System"]
+      title: "User Control & Tool Call Approval",
+      description: "You approve every tool invocation. Agents must request permission, ensuring control and security at every step.",
+      highlights: ["Full User Control", "Manual Permission", "Audit Trail"]
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Model Context Protocol",
-      description: "Connect agents to external tools like Jira, databases, and APIs through the standardized MCP interface.",
-      highlights: ["External Tools", "Jira Integration", "API Connections"]
+      title: "Model Context Protocol (MCP)",
+      description: "Standardized agent-to-tool and agent-to-agent integration. Seamlessly connect to Jira, APIs, databases, and more.",
+      highlights: ["Standardized MCP", "External Integrations", "Extensible"]
     },
     {
       icon: <Search className="w-8 h-8" />,
       title: "Web Search & Research",
-      description: "Agents can find current information online with your approval, ensuring access to the latest data and insights.",
-      highlights: ["Real-time Data", "Web Research", "Current Information"]
+      description: "Agents can access the latest information online with your approval, providing up-to-date answers and insights.",
+      highlights: ["Live Web Data", "Web Research", "Current Info"]
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Conversation Memory",
-      description: "Agents remember past conversations and context, providing more relevant and personalized responses over time.",
-      highlights: ["Context Aware", "Persistent Memory", "Personalized"]
+      description: "Agents remember context and prior conversations, enabling more relevant, personalized AI workflows.",
+      highlights: ["Context Awareness", "Persistent Memory", "Personalized Replies"]
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "Code Assistance",
-      description: "Specialized agents can analyze code, help with debugging, and assist with various programming tasks and reviews.",
-      highlights: ["Code Analysis", "Debugging Help", "Programming Support"]
+      description: "Specialized agents help you analyze, debug, and review code with advanced programming support.",
+      highlights: ["Code Analysis", "Debugging", "Programming Help"]
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
       title: "Dual Interfaces",
-      description: "Chat with AgentCrew using either a text console or a modern graphical interface. Both support file handling and streaming.",
-      highlights: ["Console & GUI", "File Support", "Streaming Responses"]
+      description: "Chat in a modern graphical window or classic console—both with file handling and streaming support.",
+      highlights: ["Console & GUI", "File Uploads", "Streaming Chat"]
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: "Rich File Handling",
-      description: "Work with text, images, PDF, DOCX, XLSX, and PPTX files directly in chat. Agents can process and analyze various formats.",
-      highlights: ["Multiple Formats", "Document Analysis", "Image Processing"]
+      description: "Work with text, images, PDF, DOCX, XLSX, and PPTX directly in chat. Analyze, summarize, and process documents and images.",
+      highlights: ["Multi-format Support", "Document Analysis", "Image Processing"]
     }
   ]
 
@@ -78,9 +99,13 @@ const Features = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Powerful Features for Modern AI Workflows
           </h2>
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
+            <span className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold text-sm">MIT License</span>
+            <span className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold text-sm">Status: Beta</span>
+            <span className="inline-flex items-center bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full font-semibold text-sm">Enterprise-Grade</span>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            AgentCrew provides enterprise-grade capabilities with user-friendly interfaces, 
-            giving you the power to build sophisticated AI assistant teams.
+            AgentCrew provides enterprise-grade AI teamwork, personalization, and user control. Build specialized multi-agent teams, connect to any model, and orchestrate complex workflows securely.
           </p>
         </div>
 
@@ -99,11 +124,9 @@ const Features = () => {
                   {feature.title}
                 </h3>
               </div>
-              
               <p className="text-gray-600 mb-4 leading-relaxed">
                 {feature.description}
               </p>
-              
               <ul className="space-y-2">
                 {feature.highlights.map((highlight, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gray-700">

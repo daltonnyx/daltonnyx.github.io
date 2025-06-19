@@ -5,22 +5,22 @@ const CoreConcepts = () => {
     {
       icon: <Users className="w-12 h-12" />,
       title: "AI Teamwork",
-      description: "Just like a human team where each person has a special skill, AgentCrew applies this concept to AI. Create different AI agents with specialized instructions and tools.",
-      example: "One agent finds information online, another writes summaries, and a third handles code analysis.",
+      description: "Just like a human team, each AI agent specializes in a role. AgentCrew lets you create agents with unique skills and tools that collaborate to solve complex problems—mirroring real-world teamwork.",
+      example: "A Research Agent gathers info, a Writer Agent drafts summaries, and a Code Agent reviews code—all working together on your task.",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <ArrowRightLeft className="w-12 h-12" />,
       title: "Smart Task Sharing",
-      description: "Agents can intelligently decide to pass tasks to another agent. They have instructions on when and how to share work and information.",
-      example: "A research agent gathers data, then transfers to an analysis agent for processing, then to a writing agent for final report.",
+      description: "Agents know when and how to hand off tasks, following clear protocols for sharing work and context. The right agent takes over at the right time for efficient, expert results.",
+      example: "A Research Agent finds data, then hands off to an Analyst Agent for processing, who passes results to a Writer Agent for reporting.",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: <Cpu className="w-12 h-12" />,
       title: "Flexible AI Model Selection",
-      description: "Use different AI models from various providers. You're not stuck with one AI provider - AgentCrew makes it easy to connect and use the AI model you choose.",
-      example: "Use GPT-4 for complex reasoning, Claude for writing, and Gemini for research - all in the same workflow.",
+      description: "Mix and match AI models from OpenAI, Anthropic, Google, GitHub Copilot and more—switch providers or models as needed for each workflow.",
+      example: "Use GPT-4 for reasoning, Claude for writing, Gemini for research, Copilot for code suggestions—all in a single project.",
       color: "from-green-500 to-emerald-500"
     }
   ]

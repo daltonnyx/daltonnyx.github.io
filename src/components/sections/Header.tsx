@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, Github, Star } from 'lucide-react'
 import { cn } from '../../lib/utils'
+import agentcrewLogo from '../../assets/agentcrew_logo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,8 +21,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="https://saigontechnology.com/wp-content/uploads/2024/09/logo-black-1.svg" 
-              alt="Saigon Technology" 
+              src={agentcrewLogo}
+              alt="AgentCrew Logo" 
               className="h-8 w-auto"
             />
             <div className="hidden sm:block w-px h-6 bg-gray-300"></div>

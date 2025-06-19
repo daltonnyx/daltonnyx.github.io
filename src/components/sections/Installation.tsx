@@ -56,8 +56,11 @@ const Installation = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Get Started in Minutes
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose your preferred installation method and start building AI agent teams today.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            The fastest way to try AgentCrew is with the graphical interface (GUI). Console/CLI is also supported for advanced users.
+          </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
+            Follow the quick start or step-by-step options below. See the documentation for full details on configuration and usage.
           </p>
         </div>
 

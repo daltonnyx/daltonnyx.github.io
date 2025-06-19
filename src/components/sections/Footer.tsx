@@ -1,4 +1,5 @@
 import { Github, ExternalLink, Heart, Code, Users, FileText } from 'lucide-react'
+import agentcrewLogo from '../../assets/agentcrew_logo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -40,16 +41,15 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="https://saigontechnology.com/wp-content/uploads/2024/09/logo-black-1.svg" 
-                alt="Saigon Technology" 
-                className="h-8 w-auto filter invert"
+                src={agentcrewLogo}
+                alt="AgentCrew Logo" 
+                className="h-8 w-auto"
               />
               <div className="hidden sm:block w-px h-6 bg-gray-600"></div>
               <span className="text-xl font-bold gradient-text">AgentCrew</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Your Multi-Agent AI Assistant Framework. Build powerful AI teams with 
-              specialized agents that work together to solve complex problems.
+              AgentCrew: Your Multi-Agent AI Assistant Framework. Build teams of specialized AI agents that collaborate to solve complex problems and automate tasks—now in Beta, MIT Licensed, Python 3.12+.
             </p>
             <div className="flex space-x-4">
               <a
