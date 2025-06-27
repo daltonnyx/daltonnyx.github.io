@@ -1,10 +1,28 @@
-import { ArrowRight, Download, Github } from "lucide-react";
+import { ArrowRight, Download, Github, Maximize2 } from "lucide-react";
 
 const Hero = () => {
+  const handleFullscreen = () => {
+    const video = document.getElementById('hero-video') as HTMLVideoElement;
+    if (video) {
+      try {
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if ((video as any).webkitRequestFullscreen) {
+          (video as any).webkitRequestFullscreen();
+        } else if ((video as any).msRequestFullscreen) {
+          (video as any).msRequestFullscreen();
+        }
+      } catch (error) {
+        console.warn('Fullscreen not supported or failed:', error);
+      }
+    }
+  };
+
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-primary-50 via-white to-accent-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        {/* Main Hero Content - Centered Layout */}
+        <div className="text-center mb-16">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-500 text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
@@ -47,7 +65,7 @@ const Hero = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-500 mb-2">6+</div>
               <div className="text-gray-600">AI Providers</div>
@@ -65,8 +83,80 @@ const Hero = () => {
               <div className="text-gray-600">Open Source</div>
             </div>
           </div>
+        </div>
 
-          {/* Demo Preview */}
+        {/* Demo Video Section - Full Width Row */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              See AgentCrew in Action
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Watch how multiple AI agents collaborate to solve complex tasks through intelligent coordination and knowledge sharing.
+            </p>
+          </div>
+          
+          <div className="relative max-w-6xl mx-auto">
+            <div className="bg-gray-900 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:scale-[1.01]">
+              {/* Video Container */}
+              <div className="relative aspect-video bg-gray-800">
+                <video
+                  className="w-full h-full object-cover transition-all duration-300 hover:brightness-110"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="AgentCrew Demo Video - Showing the AI assistant framework in action"
+                  id="hero-video"
+                >
+                  <source src="/agentcrew_demo.mp4" type="video/mp4" />
+                  <div className="absolute inset-0 flex items-center justify-center p-6">
+                    <div className="text-center animate-pulse">
+                      <div className="text-gray-400 text-lg mb-2">
+                        🎥 Demo Video Unavailable
+                      </div>
+                      <p className="text-gray-500 text-sm">
+                        Your browser doesn't support video playback. 
+                        <br />
+                        Please use a modern browser to view the AgentCrew demo.
+                      </p>
+                    </div>
+                  </div>
+                </video>
+                
+                {/* Fullscreen Button - Bottom Right Corner */}
+                <button
+                  onClick={handleFullscreen}
+                  className="absolute bottom-4 right-4 w-12 h-12 bg-black/70 hover:bg-black/90 rounded-lg flex items-center justify-center shadow-lg transform transition-all duration-200 hover:scale-110 group backdrop-blur-sm"
+                  aria-label="View video in fullscreen"
+                  title="Fullscreen"
+                >
+                  <Maximize2 className="w-5 h-5 text-white group-hover:text-primary-400 transition-colors duration-200" />
+                </button>
+              </div>
+            </div>
+            
+            {/* Video Caption */}
+            <div className="text-center mt-6">
+              <p className="text-sm text-gray-500">
+                Real-time demonstration of multi-agent AI collaboration and task delegation
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Terminal Demo Section - Optional Secondary Demo */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Quick Terminal Preview
+            </h3>
+            <p className="text-gray-600">
+              See how simple it is to get started with AgentCrew
+            </p>
+          </div>
+          
           <div className="relative max-w-4xl mx-auto">
             <div className="bg-gray-900 rounded-xl shadow-2xl overflow-hidden">
               <div className="flex items-center justify-between px-6 py-4 bg-gray-800">
