@@ -149,7 +149,7 @@ const Features = () => {
               Get started with AgentCrew today and experience the power of collaborative AI agents.
             </p>
               <a
-              href="#installation"
+              href="#use-cases"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors duration-200 font-semibold"
             >
               <Settings className="w-5 h-5 mr-2" />
