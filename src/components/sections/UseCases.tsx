@@ -1,5 +1,4 @@
 import {
-  Rss,
   Search,
   FileText,
   Code,
@@ -10,32 +9,27 @@ import {
   Download,
   ExternalLink,
   Wrench,
+  Bot,
 } from "lucide-react";
 
 const UseCases = () => {
   const agents = [
     {
-      id: "DailySummarizer",
-      icon: <Rss className="w-8 h-8" />,
-      title: "Daily News Summarizer",
+      id: "PromptMaker",
+      icon: <Bot className="w-8 h-8" />,
+      title: "Agent Maker (Prompt Engineer)",
       description:
-        "Automatically fetch and summarize daily news from RSS feeds related to AI, LLMs, and Software Development.",
+        "Specializes in crafting and enhancing prompts, especially system prompts for AI agents, using strategic technique selection.",
       tools: ["memory", "web_search"],
-      mcpTools: [
-        {
-          name: "rss2md",
-          url: "https://github.com/daltonnyx/userful-mcps/",
-          description: "RSS to Markdown converter for news aggregation"
-        }
-      ],
+      mcpTools: [],
       useCases: [
-        "Daily AI/ML news briefings",
-        "Software development trend monitoring", 
-        "Automated tech newsletter generation",
-        "Research paper and blog post aggregation",
+        "Creating custom agent system prompts",
+        "Optimizing existing agent instructions",
+        "Designing prompt templates for workflows",
+        "Enhancing agent reasoning capabilities",
       ],
-      color: "from-orange-500 to-red-500",
-      audience: "Tech Leaders & Researchers",
+      color: "from-purple-500 to-pink-500",
+      audience: "Prompt Engineers & AI Specialists",
       enabled: true,
     },
     {
