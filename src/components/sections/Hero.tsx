@@ -2,7 +2,7 @@ import { ArrowRight, Download, Github, Maximize2 } from "lucide-react";
 
 const Hero = () => {
   const handleFullscreen = () => {
-    const video = document.getElementById('hero-video') as HTMLVideoElement;
+    const video = document.getElementById("hero-video") as HTMLVideoElement;
     if (video) {
       try {
         if (video.requestFullscreen) {
@@ -13,7 +13,7 @@ const Hero = () => {
           (video as any).msRequestFullscreen();
         }
       } catch (error) {
-        console.warn('Fullscreen not supported or failed:', error);
+        console.warn("Fullscreen not supported or failed:", error);
       }
     }
   };
@@ -39,8 +39,8 @@ const Hero = () => {
           {/* Subtitle */}
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Build powerful AI assistants by creating specialized agent teams
-            that work together. Support for OpenAI, Claude, Gemini, GitHub
-            Copilot, and more.
+            that work together. Support for OpenAI, Claude, Gemini, Deepinfra,
+            and more.
           </p>
 
           {/* CTA Buttons */}
@@ -92,10 +92,11 @@ const Hero = () => {
               See AgentCrew in Action
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Watch how multiple AI agents collaborate to solve complex tasks through intelligent coordination and knowledge sharing.
+              Watch how multiple AI agents collaborate to solve complex tasks
+              through intelligent coordination and knowledge sharing.
             </p>
           </div>
-          
+
           <div className="relative max-w-6xl mx-auto">
             <div className="bg-gray-900 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:scale-[1.01]">
               {/* Video Container */}
@@ -117,14 +118,14 @@ const Hero = () => {
                         🎥 Demo Video Unavailable
                       </div>
                       <p className="text-gray-500 text-sm">
-                        Your browser doesn't support video playback. 
+                        Your browser doesn't support video playback.
                         <br />
                         Please use a modern browser to view the AgentCrew demo.
                       </p>
                     </div>
                   </div>
                 </video>
-                
+
                 {/* Fullscreen Button - Bottom Right Corner */}
                 <button
                   onClick={handleFullscreen}
@@ -136,11 +137,12 @@ const Hero = () => {
                 </button>
               </div>
             </div>
-            
+
             {/* Video Caption */}
             <div className="text-center mt-6">
               <p className="text-sm text-gray-500">
-                Real-time demonstration of multi-agent AI collaboration and task delegation
+                Real-time demonstration of multi-agent AI collaboration and task
+                delegation
               </p>
             </div>
           </div>
@@ -156,7 +158,7 @@ const Hero = () => {
               See how simple it is to get started with AgentCrew
             </p>
           </div>
-          
+
           <div className="relative max-w-4xl mx-auto">
             <div className="bg-gray-900 rounded-xl shadow-2xl overflow-hidden">
               <div className="flex items-center justify-between px-6 py-4 bg-gray-800">
@@ -203,3 +205,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

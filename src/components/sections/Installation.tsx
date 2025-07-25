@@ -12,7 +12,9 @@ import { cn } from "../../lib/utils";
 
 const Installation = () => {
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<"pypi" | "script" | "source">("pypi");
+  const [activeTab, setActiveTab] = useState<"pypi" | "script" | "source">(
+    "pypi",
+  );
 
   const copyToClipboard = (text: string, commandId: string) => {
     navigator.clipboard.writeText(text);
@@ -37,7 +39,6 @@ const Installation = () => {
   ];
 
   const usageCommands = [
-    "agentcrew copilot-auth",
     "agentcrew chat",
     "agentcrew chat --console",
     "agentcrew chat --provider openai --console",
@@ -61,11 +62,12 @@ const Installation = () => {
             Get Started in Minutes
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
-            Install AgentCrew from PyPI for the fastest setup experience.
-            GUI and console interfaces are both supported.
+            Install AgentCrew from PyPI for the fastest setup experience. GUI
+            and console interfaces are both supported.
           </p>
           <p className="text-base text-gray-500 max-w-2xl mx-auto">
-            Choose your preferred installation method below. The PyPI package is the recommended approach for most users.
+            Choose your preferred installation method below. The PyPI package is
+            the recommended approach for most users.
           </p>
         </div>
 
@@ -154,7 +156,9 @@ const Installation = () => {
                   <div className="bg-gray-900 rounded-lg p-6 relative">
                     <div className="flex items-center mb-4">
                       <div className="w-3 h-3 bg-primary-500 rounded-full mr-3"></div>
-                      <h4 className="text-lg font-semibold text-white">All Platforms (Recommended)</h4>
+                      <h4 className="text-lg font-semibold text-white">
+                        All Platforms (Recommended)
+                      </h4>
                     </div>
                     <code className="text-primary-400 text-lg font-mono break-all block">
                       {pypiInstallCommand}
@@ -172,20 +176,32 @@ const Installation = () => {
                       )}
                     </button>
                   </div>
-                  
+
                   {/* Benefits */}
                   <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-primary-50 p-4 rounded-lg text-center">
-                      <div className="text-primary-600 font-semibold mb-1">✨ Latest Version</div>
-                      <div className="text-sm text-primary-700">Always up-to-date</div>
+                      <div className="text-primary-600 font-semibold mb-1">
+                        ✨ Latest Version
+                      </div>
+                      <div className="text-sm text-primary-700">
+                        Always up-to-date
+                      </div>
                     </div>
                     <div className="bg-primary-50 p-4 rounded-lg text-center">
-                      <div className="text-primary-600 font-semibold mb-1">⚡ Quick Setup</div>
-                      <div className="text-sm text-primary-700">One command install</div>
+                      <div className="text-primary-600 font-semibold mb-1">
+                        ⚡ Quick Setup
+                      </div>
+                      <div className="text-sm text-primary-700">
+                        One command install
+                      </div>
                     </div>
                     <div className="bg-primary-50 p-4 rounded-lg text-center">
-                      <div className="text-primary-600 font-semibold mb-1">🔧 Auto Dependencies</div>
-                      <div className="text-sm text-primary-700">Handles requirements</div>
+                      <div className="text-primary-600 font-semibold mb-1">
+                        🔧 Auto Dependencies
+                      </div>
+                      <div className="text-sm text-primary-700">
+                        Handles requirements
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -240,7 +256,10 @@ const Installation = () => {
                     </code>
                     <button
                       onClick={() =>
-                        copyToClipboard(scriptInstallCommands.windows, "windows")
+                        copyToClipboard(
+                          scriptInstallCommands.windows,
+                          "windows",
+                        )
                       }
                       className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
                     >
