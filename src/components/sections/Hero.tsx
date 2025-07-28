@@ -173,36 +173,79 @@ const Hero = () => {
                 <div className="w-6"></div>
               </div>
               <div className="p-6 font-mono text-xs sm:text-sm overflow-x-auto">
-                <pre className="text-green-400 mb-4">{` █████╗   ██████╗  ███████╗ ███╗   ██╗ ████████╗  ██████╗ ██████╗  ███████╗ ██╗    ██╗
+                <pre className="text-green-400 mb-4 leading-none">{`  █████╗   ██████╗  ███████╗ ███╗   ██╗ ████████╗  ██████╗ ██████╗  ███████╗ ██╗    ██╗
  ██╔══██╗ ██╔════╝  ██╔════╝ ████╗  ██║ ╚══██╔══╝ ██╔════╝ ██╔══██╗ ██╔════╝ ██║    ██║
  ███████║ ██║  ███╗ █████╗   ██╔██╗ ██║    ██║    ██║      ██████╔╝ █████╗   ██║ █╗ ██║
  ██╔══██║ ██║   ██║ ██╔══╝   ██║╚██╗██║    ██║    ██║      ██╔══██╗ ██╔══╝   ██║███╗██║
  ██║  ██║ ╚██████╔╝ ███████╗ ██║ ╚████║    ██║    ╚██████╗ ██║  ██║ ███████╗ ╚███╔███╔╝
  ╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚═╝  ╚═══╝    ╚═╝     ╚═════╝ ╚═╝  ╚═╝ ╚══════╝  ╚══╝╚══╝ `}</pre>
-                
+
                 <div className="border border-gray-700 rounded-lg p-4 mb-4">
-                  <div className="text-blue-400 mb-2">🎮 Welcome to AgentCrew v0.6.6 interactive chat!</div>
-                  <div className="text-gray-400 mb-1">Press Ctrl+C twice to exit.</div>
-                  <div className="text-gray-400 mb-1">Type 'exit' or 'quit' to end the session.</div>
-                  <div className="text-gray-400 mb-1">Use '/file &lt;file_path&gt;' to include a file in your message.</div>
-                  <div className="text-gray-400 mb-1">Use '/clear' to clear the conversation history.</div>
-                  <div className="text-gray-400 mb-1">Use '/think &lt;budget&gt;' to enable Claude's thinking mode (min 1024 tokens).</div>
-                  <div className="text-gray-400 mb-1">Use '/think 0' to disable thinking mode.</div>
-                  <div className="text-gray-400 mb-1">Use '/model [model_id]' to switch models or list available models.</div>
-                  <div className="text-gray-400 mb-1">Use '/jump &lt;turn_number&gt;' to rewind the conversation to a previous turn.</div>
-                  <div className="text-gray-400 mb-1">Use '/copy' to copy the latest assistant response to clipboard.</div>
-                  <div className="text-gray-400 mb-1">Use '/agent [agent_name]' to switch agents or list available agents.</div>
-                  <div className="text-gray-400 mb-1">Use '/list' to list saved conversations.</div>
-                  <div className="text-gray-400 mb-1">Use '/load &lt;id&gt;' or '/load &lt;number&gt;' to load a conversation.</div>
-                  <div className="text-gray-400 mb-1">Use '/consolidate [count]' to summarize older messages (default: 10 recent messages preserved).</div>
-                  <div className="text-gray-400">Tool calls require confirmation before execution.</div>
+                  <div className="text-blue-400 mb-2">
+                    🎮 Welcome to AgentCrew v0.6.6 interactive chat!
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Press Ctrl+C twice to exit.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Type 'exit' or 'quit' to end the session.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/file &lt;file_path&gt;' to include a file in your
+                    message.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/clear' to clear the conversation history.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/think &lt;budget&gt;' to enable Claude's thinking mode
+                    (min 1024 tokens).
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/think 0' to disable thinking mode.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/model [model_id]' to switch models or list available
+                    models.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/jump &lt;turn_number&gt;' to rewind the conversation
+                    to a previous turn.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/copy' to copy the latest assistant response to
+                    clipboard.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/agent [agent_name]' to switch agents or list available
+                    agents.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/list' to list saved conversations.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/load &lt;id&gt;' or '/load &lt;number&gt;' to load a
+                    conversation.
+                  </div>
+                  <div className="text-gray-400 mb-1">
+                    Use '/consolidate [count]' to summarize older messages
+                    (default: 10 recent messages preserved).
+                  </div>
+                  <div className="text-gray-400">
+                    Tool calls require confirmation before execution.
+                  </div>
                 </div>
-                
+
                 <div className="mb-2">
-                  <span className="text-purple-400">[ReactAgent:deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct]</span>
+                  <span className="text-purple-400">
+                    [ReactAgent:deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct]
+                  </span>
                 </div>
                 <div>
-                  <span className="text-gray-400">(Press Enter for new line, Ctrl+S/Alt+Enter to submit, Up/Down for history, Ctrl+V to paste)</span>
+                  <span className="text-gray-400">
+                    (Press Enter for new line, Ctrl+S/Alt+Enter to submit,
+                    Up/Down for history, Ctrl+V to paste)
+                  </span>
                 </div>
               </div>
             </div>
@@ -214,4 +257,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
