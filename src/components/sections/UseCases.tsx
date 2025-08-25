@@ -15,7 +15,7 @@ import {
 const UseCases = () => {
   const agents = [
     {
-      id: "PromptMaker",
+      id: "AgentMaker",
       icon: <Bot className="w-8 h-8" />,
       title: "Agent Maker (Prompt Engineer)",
       description:
@@ -33,7 +33,7 @@ const UseCases = () => {
       enabled: true,
     },
     {
-      id: "DeepResearchAgent", 
+      id: "DeepResearchAgent",
       icon: <Search className="w-8 h-8" />,
       title: "Deep Research Agent",
       description:
@@ -61,8 +61,8 @@ const UseCases = () => {
         {
           name: "Office Word MCP Server",
           url: "https://github.com/GongRzhe/Office-Word-MCP-Server",
-          description: "Microsoft Word document creation and editing"
-        }
+          description: "Microsoft Word document creation and editing",
+        },
       ],
       useCases: [
         "Technical documentation creation",
@@ -85,13 +85,13 @@ const UseCases = () => {
         {
           name: "wcgw",
           url: "https://github.com/rusiaaman/wcgw",
-          description: "Code editing and terminal operations"
+          description: "Code editing and terminal operations",
         },
         {
-          name: "context7", 
+          name: "context7",
           url: "https://github.com/upstash/context7",
-          description: "Documentation context and retrieval"
-        }
+          description: "Documentation context and retrieval",
+        },
       ],
       useCases: [
         "Full-stack application development",
@@ -113,19 +113,19 @@ const UseCases = () => {
       mcpTools: [
         {
           name: "wcgw",
-          url: "https://github.com/rusiaaman/wcgw", 
-          description: "Code editing and terminal operations"
+          url: "https://github.com/rusiaaman/wcgw",
+          description: "Code editing and terminal operations",
         },
         {
           name: "playwright-mcp",
           url: "https://github.com/microsoft/playwright-mcp",
-          description: "Browser automation and testing"
-        }
+          description: "Browser automation and testing",
+        },
       ],
       useCases: [
         "Interactive 3D web applications",
         "Educational 3D visualizations",
-        "Browser-based games and simulations", 
+        "Browser-based games and simulations",
         "Rapid prototyping of web interfaces",
       ],
       color: "from-indigo-500 to-purple-500",
@@ -143,8 +143,8 @@ const UseCases = () => {
         {
           name: "filesystem",
           url: "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-          description: "File system operations for presentation editing"
-        }
+          description: "File system operations for presentation editing",
+        },
       ],
       useCases: [
         "Technical conference presentations",
@@ -167,7 +167,7 @@ const UseCases = () => {
     document.body.removeChild(link);
   };
 
-  const enabledAgents = agents.filter(agent => agent.enabled);
+  const enabledAgents = agents.filter((agent) => agent.enabled);
 
   return (
     <section id="use-cases" className="py-20 bg-white">
@@ -178,11 +178,13 @@ const UseCases = () => {
             Example AI Agents to Inspire Your Workflows
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
-            Explore these sample agents to understand how AgentCrew works. Use them as-is or as blueprints 
-            to create custom agents tailored to your specific needs and workflows.
+            Explore these sample agents to understand how AgentCrew works. Use
+            them as-is or as blueprints to create custom agents tailored to your
+            specific needs and workflows.
           </p>
           <p className="text-base text-gray-500 max-w-2xl mx-auto">
-            Download any configuration, modify it, or build entirely new agents based on these examples.
+            Download any configuration, modify it, or build entirely new agents
+            based on these examples.
           </p>
         </div>
 
@@ -194,9 +196,7 @@ const UseCases = () => {
               className="bg-white rounded-2xl border border-gray-200 shadow-lg card-hover overflow-hidden"
             >
               {/* Header */}
-              <div
-                className={`bg-gradient-to-r ${agent.color} p-6 text-white`}
-              >
+              <div className={`bg-gradient-to-r ${agent.color} p-6 text-white`}>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center space-x-4">
                     <div className="p-2 bg-white/20 rounded-lg">
@@ -264,7 +264,10 @@ const UseCases = () => {
                     </h4>
                     <div className="space-y-3">
                       {agent.mcpTools.map((mcp, idx) => (
-                        <div key={idx} className="border border-gray-200 rounded-lg p-3">
+                        <div
+                          key={idx}
+                          className="border border-gray-200 rounded-lg p-3"
+                        >
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-medium text-sm text-gray-900">
                               {mcp.name}
@@ -279,7 +282,9 @@ const UseCases = () => {
                               <span>View</span>
                             </a>
                           </div>
-                          <p className="text-xs text-gray-600">{mcp.description}</p>
+                          <p className="text-xs text-gray-600">
+                            {mcp.description}
+                          </p>
                         </div>
                       ))}
                     </div>
@@ -291,7 +296,7 @@ const UseCases = () => {
         </div>
 
         {/* Disabled Agents Notice */}
-        {agents.some(agent => !agent.enabled) && (
+        {agents.some((agent) => !agent.enabled) && (
           <div className="bg-gray-50 rounded-lg p-6 mb-16">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               Coming Soon
@@ -300,12 +305,17 @@ const UseCases = () => {
               Additional agents are in development and will be available soon:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {agents.filter(agent => !agent.enabled).map((agent, idx) => (
-                <div key={idx} className="flex items-center space-x-3 text-gray-500">
-                  {agent.icon}
-                  <span className="font-medium">{agent.title}</span>
-                </div>
-              ))}
+              {agents
+                .filter((agent) => !agent.enabled)
+                .map((agent, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center space-x-3 text-gray-500"
+                  >
+                    {agent.icon}
+                    <span className="font-medium">{agent.title}</span>
+                  </div>
+                ))}
             </div>
           </div>
         )}
@@ -316,8 +326,9 @@ const UseCases = () => {
             Ready to Build Your Custom AI Agents?
           </h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Use these example agents as starting points to create your own specialized AI assistants. 
-            Customize their prompts, tools, and capabilities to match your unique workflows.
+            Use these example agents as starting points to create your own
+            specialized AI assistants. Customize their prompts, tools, and
+            capabilities to match your unique workflows.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -345,3 +356,4 @@ const UseCases = () => {
 };
 
 export default UseCases;
+

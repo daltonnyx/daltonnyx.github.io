@@ -25,6 +25,9 @@ A modern, responsive landing page for AgentCrew - a multi-agent AI assistant fra
 
 - Node.js 18+ 
 - npm or yarn
+- **uv package manager** - Fast Python package manager for AgentCrew installation
+  - Installation: https://docs.astral.sh/uv/getting-started/installation/
+  - Alternative: `pip install uv` (if you have Python/pip already)
 
 ### Setup
 

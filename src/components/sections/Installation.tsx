@@ -10,6 +10,13 @@ import {
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 
+interface Prerequisite {
+  name: string;
+  description: string;
+  link?: string;
+  linkText?: string;
+}
+
 const Installation = () => {
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"pypi" | "script" | "source">(
@@ -22,7 +29,8 @@ const Installation = () => {
     setTimeout(() => setCopiedCommand(null), 2000);
   };
 
-  const pypiInstallCommand = "uv tool install agentcrew-ai@latest";
+  const pypiInstallCommand =
+    "uv tool install --python=3.12 --force agentcrew-ai@latest";
 
   const scriptInstallCommands = {
     linux: "curl -LsSf https://agentcrew.dev/install.sh | bash",
@@ -44,11 +52,13 @@ const Installation = () => {
     "agentcrew chat --provider openai --console",
   ];
 
-  const prerequisites = [
+  const prerequisites: Prerequisite[] = [
     { name: "Python 3.12+", description: "Modern Python version required" },
     {
       name: "uv package manager",
-      description: "Fast Python package manager (pip install uv)",
+      description: "Fast Python package manager",
+      link: "https://docs.astral.sh/uv/getting-started/installation/",
+      linkText: "Install uv →"
     },
     { name: "API Keys", description: "At least one AI provider API key" },
   ];
@@ -85,9 +95,19 @@ const Installation = () => {
                 <div className="font-semibold text-gray-900 mb-1">
                   {prereq.name}
                 </div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-600 mb-2">
                   {prereq.description}
                 </div>
+                {prereq.link && (
+                  <a
+                    href={prereq.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
+                  >
+                    {prereq.linkText}
+                  </a>
+                )}
               </div>
             ))}
           </div>
