@@ -30,7 +30,10 @@ const Installation = () => {
   };
 
   const pypiInstallCommand =
-    "uv tool install --python=3.12 --force agentcrew-ai@latest";
+    "uv tool install --python=3.12 --force agentcrew-ai[cpu] --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match";
+
+  const pypiNvidiaInstallCommand =
+    "uv tool install --python=3.12 --force agentcrew-ai[nvidia]";
 
   const scriptInstallCommands = {
     linux: "curl -LsSf https://agentcrew.dev/install.sh | bash",
@@ -58,7 +61,7 @@ const Installation = () => {
       name: "uv package manager",
       description: "Fast Python package manager",
       link: "https://docs.astral.sh/uv/getting-started/installation/",
-      linkText: "Install uv →"
+      linkText: "Install uv →",
     },
     { name: "API Keys", description: "At least one AI provider API key" },
   ];
@@ -177,7 +180,7 @@ const Installation = () => {
                     <div className="flex items-center mb-4">
                       <div className="w-3 h-3 bg-primary-500 rounded-full mr-3"></div>
                       <h4 className="text-lg font-semibold text-white">
-                        All Platforms (Recommended)
+                        CPU Version (Recommended)
                       </h4>
                     </div>
                     <code className="text-primary-400 text-lg font-mono break-all block">
@@ -190,6 +193,29 @@ const Installation = () => {
                       className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
                     >
                       {copiedCommand === "pypi" ? (
+                        <Check className="w-4 h-4 text-green-400" />
+                      ) : (
+                        <Copy className="w-4 h-4 text-gray-400" />
+                      )}
+                    </button>
+                  </div>
+                  <div className="bg-gray-900 rounded-lg p-6 relative mt-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-3 h-3 bg-primary-500 rounded-full mr-3"></div>
+                      <h4 className="text-lg font-semibold text-white">
+                        Nvidia Accelerated Version
+                      </h4>
+                    </div>
+                    <code className="text-primary-400 text-lg font-mono break-all block">
+                      {pypiNvidiaInstallCommand}
+                    </code>
+                    <button
+                      onClick={() =>
+                        copyToClipboard(pypiNvidiaInstallCommand, "pypinvidia")
+                      }
+                      className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
+                    >
+                      {copiedCommand === "pypinvidia" ? (
                         <Check className="w-4 h-4 text-green-400" />
                       ) : (
                         <Copy className="w-4 h-4 text-gray-400" />
