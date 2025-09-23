@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Github, Star } from "lucide-react";
+import { Menu, X, Star } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "../../lib/utils";
 import agentcrewLogo from "../../assets/agentcrew_logo.png";
