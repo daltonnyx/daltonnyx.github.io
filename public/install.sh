@@ -3,25 +3,11 @@ set -e
 
 echo "Starting AgentCrew installation script..."
 
-# 1. Check if git is installed
-echo "Checking for Git..."
-if ! command -v git &>/dev/null; then
-  echo "ERROR: Git is not installed or not in your PATH."
-  echo "Please install Git before continuing. You can typically install it with:"
-  echo "  - For Debian/Ubuntu: sudo apt-get install git"
-  echo "  - For Fedora: sudo dnf install git"
-  echo "  - For macOS: brew install git (requires Homebrew)"
-  echo "After installation, restart your terminal and run this script again."
-  exit 1
-else
-  echo "Git is installed."
-fi
-
-# 2. Check if uv command exists
+# 1. Check if uv command exists
 echo "Checking for uv..."
 if ! command -v uv &>/dev/null; then
   echo "uv command not found. Attempting to install uv..."
-  # 2. If not, install uv using curl
+  # Install uv using curl
   curl -LsSf https://astral.sh/uv/install.sh | sh
 
   # Source environment variables to make uv available in the current session
@@ -54,58 +40,29 @@ else
   echo "uv is already installed."
 fi
 
-# 3. Create a temporary directory
-TEMP_DIR=$(mktemp -d)
-echo "Created temporary directory at $TEMP_DIR"
+# 2. Install AgentCrew directly from PyPI
+echo "Installing AgentCrew from PyPI..."
+echo "This will install the latest version of agentcrew-ai with CPU support."
 
-# Trap to clean up temp directory on exit
-# shellcheck disable=SC2064
-trap "rm -rf '$TEMP_DIR'" EXIT
-
-# 4. Clone the repository into the temporary directory
-echo "Cloning AgentCrew repository (https://github.com/saigontechnology/AgentCrew.git)..."
-if git clone https://github.com/saigontechnology/AgentCrew.git "$TEMP_DIR/AgentCrew"; then
-  echo "Repository cloned successfully into $TEMP_DIR/AgentCrew"
+if uv tool install --python=3.12 --force agentcrew-ai[cpu] --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match; then
+  echo "AgentCrew installed successfully."
 else
-  echo "ERROR: Failed to clone repository."
+  echo "ERROR: Failed to install AgentCrew using uv."
   exit 1
 fi
 
-# 5. Change the current directory to the cloned repository's root
-cd "$TEMP_DIR/AgentCrew"
-echo "Changed directory to $PWD"
-last_version=$(git tag -l | tail -1)
-git checkout $last_version
-
-# 6. Install project dependencies
-echo "Installing project dependencies using 'uv tool install . --reinstall'..."
-echo "Note: This script uses 'uv tool install . --reinstall' as requested."
-echo "For some Python projects, 'uv pip install -e .' or 'uv pip install .' might be more common for installing dependencies and the project itself in editable mode."
-echo "Please verify this is the correct command for the AgentCrew project structure."
-
-if uv tool install --with="cmake" --python=3.12 . --reinstall; then
-  echo "Project dependencies installed successfully."
-else
-  echo "ERROR: Failed to install project dependencies using uv."
-  exit 1
-fi
-
-# 7. Print a final success message
+# 3. Print a final success message
 echo ""
 echo "-------------------------------------------------------------------"
 echo "AgentCrew installation successful!"
-echo "The project has been cloned and set up in the temporary directory:"
-echo "$TEMP_DIR/AgentCrew"
 echo ""
-echo "IMPORTANT:"
-echo "This is a temporary directory. If you want to keep the project,"
-echo "please move it to a permanent location before this shell session ends or the system reboots."
-echo "Example: mv '$TEMP_DIR/AgentCrew' /path/to/your/desired/location/"
-echo "Alternatively, you can re-run this script to set it up again in a new temporary directory."
+echo "To start using AgentCrew:"
+echo "1. Open a NEW terminal session to ensure PATH changes are applied."
+echo "2. To start the GUI, run: agentcrew chat"
+echo "3. To start the console application, run: agentcrew chat --console"
+echo "4. You can login with github copilot using: agentcrew copilot-auth"
+echo ""
+echo "For more information, visit: https://github.com/saigontechnology/AgentCrew"
 echo "-------------------------------------------------------------------"
-
-# The cleanup of TEMP_DIR will happen automatically on script exit due to the trap command.
-# If you want the user to manually clean it, you can remove the trap and instruct them.
-# For now, automatic cleanup is safer.
 
 exit 0

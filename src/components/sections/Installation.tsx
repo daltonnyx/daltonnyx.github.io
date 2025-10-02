@@ -20,7 +20,7 @@ interface Prerequisite {
 const Installation = () => {
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"pypi" | "script" | "source">(
-    "pypi",
+    "script",
   );
 
   const copyToClipboard = (text: string, commandId: string) => {
@@ -121,18 +121,6 @@ const Installation = () => {
           {/* Tab Headers */}
           <div className="flex border-b border-gray-200">
             <button
-              onClick={() => setActiveTab("pypi")}
-              className={cn(
-                "flex-1 px-4 py-4 text-center font-semibold transition-colors duration-200",
-                activeTab === "pypi"
-                  ? "bg-primary-50 text-primary-500 border-b-2 border-primary-500"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50",
-              )}
-            >
-              <Download className="w-5 h-5 inline-block mr-2" />
-              PyPI Package
-            </button>
-            <button
               onClick={() => setActiveTab("script")}
               className={cn(
                 "flex-1 px-4 py-4 text-center font-semibold transition-colors duration-200",
@@ -143,6 +131,18 @@ const Installation = () => {
             >
               <Terminal className="w-5 h-5 inline-block mr-2" />
               Install Script
+            </button>
+            <button
+              onClick={() => setActiveTab("pypi")}
+              className={cn(
+                "flex-1 px-4 py-4 text-center font-semibold transition-colors duration-200",
+                activeTab === "pypi"
+                  ? "bg-primary-50 text-primary-500 border-b-2 border-primary-500"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50",
+              )}
+            >
+              <Download className="w-5 h-5 inline-block mr-2" />
+              PyPI Package
             </button>
             <button
               onClick={() => setActiveTab("source")}
@@ -160,6 +160,72 @@ const Installation = () => {
 
           {/* Tab Content */}
           <div className="p-8">
+            {activeTab === "script" && (
+              <div className="space-y-8">
+                <div className="text-center mb-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Installation Scripts
+                  </h3>
+                  <p className="text-gray-600">
+                    Platform-specific automated installation scripts
+                  </p>
+                </div>
+
+                {/* Linux/MacOS */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-gray-900 flex items-center">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    Linux and MacOS
+                  </h4>
+                  <div className="bg-gray-900 rounded-lg p-4 relative">
+                    <code className="text-green-400 text-sm font-mono break-all">
+                      {scriptInstallCommands.linux}
+                    </code>
+                    <button
+                      onClick={() =>
+                        copyToClipboard(scriptInstallCommands.linux, "linux")
+                      }
+                      className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
+                    >
+                      {copiedCommand === "linux" ? (
+                        <Check className="w-4 h-4 text-green-400" />
+                      ) : (
+                        <Copy className="w-4 h-4 text-gray-400" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Windows */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-gray-900 flex items-center">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                    Windows
+                  </h4>
+                  <div className="bg-gray-900 rounded-lg p-4 relative">
+                    <code className="text-blue-400 text-sm font-mono break-all">
+                      {scriptInstallCommands.windows}
+                    </code>
+                    <button
+                      onClick={() =>
+                        copyToClipboard(
+                          scriptInstallCommands.windows,
+                          "windows",
+                        )
+                      }
+                      className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
+                    >
+                      {copiedCommand === "windows" ? (
+                        <Check className="w-4 h-4 text-green-400" />
+                      ) : (
+                        <Copy className="w-4 h-4 text-gray-400" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {activeTab === "pypi" && (
               <div className="space-y-8">
                 <div className="text-center mb-8">
@@ -254,71 +320,6 @@ const Installation = () => {
               </div>
             )}
 
-            {activeTab === "script" && (
-              <div className="space-y-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Installation Scripts
-                  </h3>
-                  <p className="text-gray-600">
-                    Platform-specific automated installation scripts
-                  </p>
-                </div>
-
-                {/* Linux/MacOS */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900 flex items-center">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                    Linux and MacOS
-                  </h4>
-                  <div className="bg-gray-900 rounded-lg p-4 relative">
-                    <code className="text-green-400 text-sm font-mono break-all">
-                      {scriptInstallCommands.linux}
-                    </code>
-                    <button
-                      onClick={() =>
-                        copyToClipboard(scriptInstallCommands.linux, "linux")
-                      }
-                      className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
-                    >
-                      {copiedCommand === "linux" ? (
-                        <Check className="w-4 h-4 text-green-400" />
-                      ) : (
-                        <Copy className="w-4 h-4 text-gray-400" />
-                      )}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Windows */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900 flex items-center">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                    Windows
-                  </h4>
-                  <div className="bg-gray-900 rounded-lg p-4 relative">
-                    <code className="text-blue-400 text-sm font-mono break-all">
-                      {scriptInstallCommands.windows}
-                    </code>
-                    <button
-                      onClick={() =>
-                        copyToClipboard(
-                          scriptInstallCommands.windows,
-                          "windows",
-                        )
-                      }
-                      className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
-                    >
-                      {copiedCommand === "windows" ? (
-                        <Check className="w-4 h-4 text-green-400" />
-                      ) : (
-                        <Copy className="w-4 h-4 text-gray-400" />
-                      )}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
 
             {activeTab === "source" && (
               <div className="space-y-8">
