@@ -45,7 +45,7 @@ try {
     Write-Host "Installing AgentCrew from PyPI..."
     Write-Host "This will install the latest version of agentcrew-ai with CPU support."
     try {
-        uv tool install --python=3.12 --force agentcrew-ai[cpu] --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match
+        uv tool install --python=3.12 --force agentcrew-ai[cpu] --native-tls --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match
         Write-Host "AgentCrew installed successfully."
     } catch {
         Write-Error "ERROR: Failed to install AgentCrew using uv."

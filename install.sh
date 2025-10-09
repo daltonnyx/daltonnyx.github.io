@@ -44,7 +44,7 @@ fi
 echo "Installing AgentCrew from PyPI..."
 echo "This will install the latest version of agentcrew-ai with CPU support."
 
-if uv tool install --python=3.12 --force agentcrew-ai[cpu] --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match; then
+if uv tool install --python=3.12 --force agentcrew-ai[cpu] --native-tls --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match; then
   echo "AgentCrew installed successfully."
 else
   echo "ERROR: Failed to install AgentCrew using uv."
