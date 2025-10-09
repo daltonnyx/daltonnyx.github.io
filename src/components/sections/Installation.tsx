@@ -38,7 +38,7 @@ const Installation = () => {
   const scriptInstallCommands = {
     linux: "curl -LsSf https://agentcrew.dev/install.sh | bash",
     windows:
-      'powershell -ExecutionPolicy ByPass -c "irm https://agentcrew.dev/install.ps1 | iex"',
+      'powershell -ExecutionPolicy RemoteSigned -c "irm https://agentcrew.dev/install.ps1 | iex"',
   };
 
   const sourceCommands = [
@@ -319,7 +319,6 @@ const Installation = () => {
                 </div>
               </div>
             )}
-
 
             {activeTab === "source" && (
               <div className="space-y-8">
