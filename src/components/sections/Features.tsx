@@ -181,26 +181,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Build Your AI Team?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Get started with AgentCrew today and experience the power of
-              collaborative AI agents.
-            </p>
-            <a
-              href="#use-cases"
-              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors duration-200 font-semibold"
-            >
-              <Settings className="w-5 h-5 mr-2" />
-              Start Building
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

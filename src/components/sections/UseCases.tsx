@@ -189,7 +189,7 @@ const UseCases = () => {
         </div>
 
         {/* Agents Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {enabledAgents.map((agent, index) => (
             <div
               key={index}
@@ -319,37 +319,6 @@ const UseCases = () => {
             </div>
           </div>
         )}
-
-        {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 lg:p-12 text-center text-white">
-          <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-            Ready to Build Your Custom AI Agents?
-          </h3>
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Use these example agents as starting points to create your own
-            specialized AI assistants. Customize their prompts, tools, and
-            capabilities to match your unique workflows.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#installation"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Get Started Now
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a
-              href="https://github.com/saigontechnology/AgentCrew"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20"
-            >
-              View on GitHub
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

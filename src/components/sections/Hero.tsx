@@ -18,6 +18,17 @@ const Hero = () => {
     }
   };
 
+  const handleGetStarted = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const installationSection = document.getElementById("installation");
+    if (installationSection) {
+      installationSection.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-primary-50 via-white to-accent-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,6 +58,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="#installation"
+              onClick={handleGetStarted}
               className="inline-flex items-center px-8 py-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <Download className="w-5 h-5 mr-2" />
