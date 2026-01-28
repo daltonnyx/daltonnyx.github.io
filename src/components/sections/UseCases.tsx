@@ -4,7 +4,6 @@ import {
   Code,
   Palette,
   Presentation,
-  ArrowRight,
   CheckCircle,
   Download,
   ExternalLink,

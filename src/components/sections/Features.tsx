@@ -3,122 +3,129 @@ import {
   Shield,
   Globe,
   MessageSquare,
-  Settings,
   Users,
-  Code,
-  Search,
-  Brain,
   FileText,
   CheckCircle,
   RefreshCcw,
   Sparkles,
   Zap,
+  Brain,
+  Network,
+  Minimize2,
 } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
       icon: <Bot className="w-8 h-8" />,
-      title: "Wide AI Model Support",
+      title: "Multi-Model Flexibility",
       description:
-        "Works with OpenAI GPT, Anthropic Claude, Google Gemini, Groq, DeepInfra, and custom providers. Switch models anytime.",
-      highlights: ["6+ AI Providers", "Swap anytime", "Customizable"],
+        "Switch between Claude, GPT, Gemini, GitHub Copilot, Groq, DeepInfra, or custom providers without rewriting your setup. Choose the best model for each task or budget.",
+      highlights: ["7+ AI Providers", "Hot-Swap Models", "Budget Control"],
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Expert Agent Teams",
+      title: "Agent Specialization",
       description:
-        "Define multiple AI agents, each with specialized expertise. Agents can intelligently transfer tasks for maximum efficiency.",
+        "Create focused agents for research, coding, writing, architecture, or any domain. Each agent gets custom instructions, tools, and behavioral rules that make them effective at their job.",
       highlights: [
-        "Multi-Agent System",
-        "Smart Task Sharing",
-        "Custom Prompts",
+        "Domain Experts",
+        "Custom System Prompts",
+        "Role-Based Tools",
       ],
-    },
-    {
-      icon: <Sparkles className="w-8 h-8" />,
-      title: "Adaptive Behaviors",
-      description:
-        "Personalize agents using powerful 'when...do...' rules. Agents learn, adapt, and apply rules for smarter interactions over time.",
-      highlights: [
-        "Behavioral Rules",
-        "Personalization",
-        "Continuous Improvement",
-      ],
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Streaming Responses",
-      description:
-        "Get real-time, live responses from AI agents so you see answers as they are generated.",
-      highlights: ["Real-Time Output", "Faster Feedback", "Enhanced UX"],
-    },
-    {
-      icon: <RefreshCcw className="w-8 h-8" />,
-      title: "Rollback & Consolidate",
-      description:
-        "Easily revert to previous chat states or merge multiple messages for streamlined conversations.",
-      highlights: [
-        "Rollback Messages",
-        "Consolidate Chats",
-        "Flexible History",
-      ],
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "User Control & Tool Call Approval",
-      description:
-        "You approve every tool invocation. Agents must request permission, ensuring control and security at every step.",
-      highlights: ["Full User Control", "Manual Permission", "Audit Trail"],
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Model Context Protocol (MCP)",
+      title: "Tool Integration",
       description:
-        "Standardized agent-to-tool and agent-to-agent integration. Seamlessly connect to Jira, APIs, databases, and more.",
-      highlights: ["Standardized MCP", "External Integrations", "Extensible"],
-    },
-    {
-      icon: <Search className="w-8 h-8" />,
-      title: "Web Search & Research",
-      description:
-        "Agents can access the latest information online with your approval, providing up-to-date answers and insights.",
-      highlights: ["Live Web Data", "Web Research", "Current Info"],
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Conversation Memory",
-      description:
-        "Agents remember context and prior conversations, enabling more relevant, personalized AI workflows.",
-      highlights: [
-        "Context Awareness",
-        "Persistent Memory",
-        "Personalized Replies",
-      ],
-    },
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "Code Assistance",
-      description:
-        "Specialized agents help you analyze, debug, and review code with advanced programming support.",
-      highlights: ["Code Analysis", "Debugging", "Programming Help"],
+        "Connect agents to real-world capabilities through Model Context Protocol (MCP), web search, code analysis, file editing, browser automation, command execution, and memory systems.",
+      highlights: ["MCP Support", "Browser Automation", "File Operations"],
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      title: "Dual Interfaces",
+      title: "Interactive & Automated Modes",
       description:
-        "Chat in a modern graphical window or classic console—both with file handling and streaming support.",
-      highlights: ["Console & GUI", "File Uploads", "Streaming Chat"],
+        "Use the GUI or console for interactive conversations. Run headless jobs for CI/CD pipelines, automation scripts, or batch processing with structured output validation.",
+      highlights: ["GUI & Console", "Job Mode", "JSON Schema Output"],
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Agent-to-Agent Communication",
+      description:
+        "Expose your agents as HTTP services using the A2A protocol. Let agents from different AgentCrew instances or external systems collaborate on complex workflows.",
+      highlights: ["A2A Protocol", "HTTP API", "Distributed Teams"],
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Control and Safety",
+      description:
+        "Approve or deny tool usage before execution. Configure permissions, rate limits, and access controls. Review what your agents are doing before they do it.",
+      highlights: ["Tool Approval", "Rate Limiting", "Audit Logging"],
+    },
+    {
+      icon: <Sparkles className="w-8 h-8" />,
+      title: "Adaptive Behavior System",
+      description:
+        "Agents learn patterns using 'when...do...' rules. Behaviors persist across sessions and automatically apply to future interactions for smarter, personalized responses.",
+      highlights: [
+        "Pattern Learning",
+        "Persistent Rules",
+        "Auto-Application",
+      ],
+    },
+    {
+      icon: <RefreshCcw className="w-8 h-8" />,
+      title: "Conversation Management",
+      description:
+        "Rollback to any previous message and continue from there. Consolidate message history to reduce token usage while preserving context. Load and resume past conversations.",
+      highlights: [
+        "Time-Travel Chat",
+        "History Consolidation",
+        "Context Preservation",
+      ],
     },
     {
       icon: <FileText className="w-8 h-8" />,
-      title: "Rich File Handling",
+      title: "Agent Sharing & Reuse",
       description:
-        "Work with text, images, PDF, DOCX, XLSX, and PPTX directly in chat. Analyze, summarize, and process documents and images.",
+        "Export and import agent configurations to share with teams or reuse across projects. Contribute to community agent library or build your private collection.",
       highlights: [
-        "Multi-format Support",
-        "Document Analysis",
-        "Image Processing",
+        "TOML/JSON Export",
+        "URL Import",
+        "Community Library",
+      ],
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "Intelligent Memory System",
+      description:
+        "Agents automatically retrieve relevant memories using semantic search when conversations start or topics change. Context-aware storage with date filtering enables personalized, informed responses.",
+      highlights: [
+        "Semantic Retrieval",
+        "Context Awareness",
+        "Date-Based Filtering",
+      ],
+    },
+    {
+      icon: <Network className="w-8 h-8" />,
+      title: "Smart Agent Transfer",
+      description:
+        "Automatically evaluates and transfers tasks to specialized agents based on domain expertise. Ensures optimal agent selection for research, coding, business analysis, and more.",
+      highlights: [
+        "Auto-Evaluation",
+        "Domain Matching",
+        "Seamless Handoffs",
+      ],
+    },
+    {
+      icon: <Minimize2 className="w-8 h-8" />,
+      title: "Auto Context Management",
+      description:
+        "Proactively consolidates conversation history when approaching token limits. Maintains continuity by preserving recent context while intelligently summarizing earlier messages.",
+      highlights: [
+        "Auto-Consolidation",
+        "Token Optimization",
+        "Context Preservation",
       ],
     },
   ];

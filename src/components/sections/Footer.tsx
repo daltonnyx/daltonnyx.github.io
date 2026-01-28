@@ -10,7 +10,6 @@ const Footer = () => {
       { name: "Core Concepts", href: "#core-concepts" },
       { name: "Use Cases", href: "#use-cases" },
       { name: "Installation", href: "#installation" },
-      { name: "Security", href: "#security" },
     ],
     resources: [
       {
@@ -101,11 +100,18 @@ const Footer = () => {
               <div className="text-white text-lg font-semibold uppercase tracking-wider">
                 Backed By
               </div>
-              <img
-                src="https://saigontechnology.com/wp-content/uploads/2024/09/logo-1.svg"
-                alt="Saigon Technology"
-                width="200"
-              />
+              <a
+                href="https://saigontechnology.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity duration-200 hover:opacity-80"
+              >
+                <img
+                  src="https://saigontechnology.com/wp-content/uploads/2024/09/logo-1.svg"
+                  alt="Saigon Technology"
+                  width="200"
+                />
+              </a>
             </div>
           </div>
 

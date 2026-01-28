@@ -3,7 +3,6 @@ import Features from '../sections/Features'
 import CoreConcepts from '../sections/CoreConcepts'
 import Installation from '../sections/Installation'
 import UseCases from '../sections/UseCases'
-import Security from '../sections/Security'
 
 const HomePage = () => {
   return (
@@ -13,7 +12,6 @@ const HomePage = () => {
       <CoreConcepts />
       <UseCases />
       <Installation />
-      <Security />
     </>
   );
 };
