@@ -36,10 +36,10 @@ const Features = () => {
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Tool Integration",
+      title: "Built-in Tool Suite",
       description:
-        "Connect agents to real-world capabilities through Model Context Protocol (MCP), web search, code analysis, file editing, browser automation, command execution, and memory systems.",
-      highlights: ["MCP Support", "Browser Automation", "File Operations"],
+        "Powerful built-in tools for browser automation, file editing, command execution, code analysis, web search, and memory systems. Extend further with Model Context Protocol (MCP) servers.",
+      highlights: ["Browser Control", "File Editing", "Command Execution", "MCP Support"],
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,

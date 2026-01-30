@@ -6,7 +6,6 @@ import {
   Presentation,
   CheckCircle,
   Download,
-  ExternalLink,
   Wrench,
   Bot,
 } from "lucide-react";
@@ -20,7 +19,6 @@ const UseCases = () => {
       description:
         "Specializes in crafting and enhancing prompts, especially system prompts for AI agents, using strategic technique selection.",
       tools: ["memory", "web_search"],
-      mcpTools: [],
       useCases: [
         "Creating custom agent system prompts",
         "Optimizing existing agent instructions",
@@ -37,8 +35,7 @@ const UseCases = () => {
       title: "Deep Research Agent",
       description:
         "Systematic, thorough, and evidence-based research with comprehensive analysis and reporting capabilities.",
-      tools: ["memory", "web_search"],
-      mcpTools: [],
+      tools: ["memory", "web_search", "browser"],
       useCases: [
         "Market research and competitive analysis",
         "Literature reviews and academic research",
@@ -55,14 +52,7 @@ const UseCases = () => {
       title: "Document Writer",
       description:
         "Specialized in creating high-quality documents with sharp, analytical writing style and intellectual depth.",
-      tools: ["memory", "web_search"],
-      mcpTools: [
-        {
-          name: "Office Word MCP Server",
-          url: "https://github.com/GongRzhe/Office-Word-MCP-Server",
-          description: "Microsoft Word document creation and editing",
-        },
-      ],
+      tools: ["memory", "web_search", "file_editing"],
       useCases: [
         "Technical documentation creation",
         "Business reports and proposals",
@@ -79,19 +69,7 @@ const UseCases = () => {
       title: "Software Engineer",
       description:
         "Expert in code implementation, debugging, programming assistance with comprehensive repository analysis and documentation research.",
-      tools: ["memory", "code_analysis", "web_search"],
-      mcpTools: [
-        {
-          name: "wcgw",
-          url: "https://github.com/rusiaaman/wcgw",
-          description: "Code editing and terminal operations",
-        },
-        {
-          name: "context7",
-          url: "https://github.com/upstash/context7",
-          description: "Documentation context and retrieval",
-        },
-      ],
+      tools: ["memory", "code_analysis", "web_search", "file_editing", "command_execution"],
       useCases: [
         "Full-stack application development",
         "Code review and debugging assistance",
@@ -108,19 +86,7 @@ const UseCases = () => {
       title: "HTML & 3D Agent",
       description:
         "Specialized in building single-file HTML applications with Three.js for 3D graphics, games, and interactive experiences.",
-      tools: ["memory", "code_analysis", "web_search"],
-      mcpTools: [
-        {
-          name: "wcgw",
-          url: "https://github.com/rusiaaman/wcgw",
-          description: "Code editing and terminal operations",
-        },
-        {
-          name: "playwright-mcp",
-          url: "https://github.com/microsoft/playwright-mcp",
-          description: "Browser automation and testing",
-        },
-      ],
+      tools: ["memory", "code_analysis", "web_search", "file_editing", "browser"],
       useCases: [
         "Interactive 3D web applications",
         "Educational 3D visualizations",
@@ -137,14 +103,7 @@ const UseCases = () => {
       title: "Technical Presenter",
       description:
         "Creates engaging, technically accurate presentations using Slidev framework for developer and technical audiences.",
-      tools: ["memory", "web_search"],
-      mcpTools: [
-        {
-          name: "filesystem",
-          url: "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-          description: "File system operations for presentation editing",
-        },
-      ],
+      tools: ["memory", "web_search", "file_editing", "command_execution"],
       useCases: [
         "Technical conference presentations",
         "Developer training materials",
@@ -238,7 +197,7 @@ const UseCases = () => {
                 </div>
 
                 {/* Built-in Tools */}
-                <div className="mb-6">
+                <div>
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center space-x-2">
                     <Wrench className="w-4 h-4" />
                     <span>Built-in Tools</span>
@@ -254,41 +213,6 @@ const UseCases = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Recommended MCP Tools */}
-                {agent.mcpTools.length > 0 && (
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">
-                      Recommended MCP Tools:
-                    </h4>
-                    <div className="space-y-3">
-                      {agent.mcpTools.map((mcp, idx) => (
-                        <div
-                          key={idx}
-                          className="border border-gray-200 rounded-lg p-3"
-                        >
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="font-medium text-sm text-gray-900">
-                              {mcp.name}
-                            </span>
-                            <a
-                              href={mcp.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 text-xs"
-                            >
-                              <ExternalLink className="w-3 h-3" />
-                              <span>View</span>
-                            </a>
-                          </div>
-                          <p className="text-xs text-gray-600">
-                            {mcp.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           ))}
