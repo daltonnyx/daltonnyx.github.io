@@ -4,118 +4,75 @@ import {
   Code,
   Palette,
   Presentation,
-  CheckCircle,
   Download,
-  Wrench,
   Bot,
+  ArrowRight,
 } from "lucide-react";
 
-const UseCases = () => {
-  const agents = [
-    {
-      id: "AgentMaker",
-      icon: <Bot className="w-8 h-8" />,
-      title: "Agent Maker (Prompt Engineer)",
-      description:
-        "Specializes in crafting and enhancing prompts, especially system prompts for AI agents, using strategic technique selection.",
-      tools: ["memory", "web_search"],
-      useCases: [
-        "Creating custom agent system prompts",
-        "Optimizing existing agent instructions",
-        "Designing prompt templates for workflows",
-        "Enhancing agent reasoning capabilities",
-      ],
-      color: "from-purple-500 to-pink-500",
-      audience: "Prompt Engineers & AI Specialists",
-      enabled: true,
-    },
-    {
-      id: "DeepResearchAgent",
-      icon: <Search className="w-8 h-8" />,
-      title: "Deep Research Agent",
-      description:
-        "Systematic, thorough, and evidence-based research with comprehensive analysis and reporting capabilities.",
-      tools: ["memory", "web_search", "browser"],
-      useCases: [
-        "Market research and competitive analysis",
-        "Literature reviews and academic research",
-        "Technology evaluation and comparison",
-        "Strategic planning and trend analysis",
-      ],
-      color: "from-blue-500 to-cyan-500",
-      audience: "Analysts & Strategists",
-      enabled: true,
-    },
-    {
-      id: "Document",
-      icon: <FileText className="w-8 h-8" />,
-      title: "Document Writer",
-      description:
-        "Specialized in creating high-quality documents with sharp, analytical writing style and intellectual depth.",
-      tools: ["memory", "web_search", "file_editing"],
-      useCases: [
-        "Technical documentation creation",
-        "Business reports and proposals",
-        "Academic papers and research documents",
-        "Policy documents and procedures",
-      ],
-      color: "from-green-500 to-emerald-500",
-      audience: "Writers & Content Creators",
-      enabled: true,
-    },
-    {
-      id: "Engineer",
-      icon: <Code className="w-8 h-8" />,
-      title: "Software Engineer",
-      description:
-        "Expert in code implementation, debugging, programming assistance with comprehensive repository analysis and documentation research.",
-      tools: ["memory", "code_analysis", "web_search", "file_editing", "command_execution"],
-      useCases: [
-        "Full-stack application development",
-        "Code review and debugging assistance",
-        "API integration and testing",
-        "Technical architecture planning",
-      ],
-      color: "from-purple-500 to-pink-500",
-      audience: "Developers & Engineering Teams",
-      enabled: true,
-    },
-    {
-      id: "HtmlAgent",
-      icon: <Palette className="w-8 h-8" />,
-      title: "HTML & 3D Agent",
-      description:
-        "Specialized in building single-file HTML applications with Three.js for 3D graphics, games, and interactive experiences.",
-      tools: ["memory", "code_analysis", "web_search", "file_editing", "browser"],
-      useCases: [
-        "Interactive 3D web applications",
-        "Educational 3D visualizations",
-        "Browser-based games and simulations",
-        "Rapid prototyping of web interfaces",
-      ],
-      color: "from-indigo-500 to-purple-500",
-      audience: "Frontend Developers & Designers",
-      enabled: true,
-    },
-    {
-      id: "PresentationAgent",
-      icon: <Presentation className="w-8 h-8" />,
-      title: "Technical Presenter",
-      description:
-        "Creates engaging, technically accurate presentations using Slidev framework for developer and technical audiences.",
-      tools: ["memory", "web_search", "file_editing", "command_execution"],
-      useCases: [
-        "Technical conference presentations",
-        "Developer training materials",
-        "Product demo presentations",
-        "Educational workshop content",
-      ],
-      color: "from-red-500 to-pink-500",
-      audience: "Speakers & Educators",
-      enabled: true,
-    },
-  ];
+const agents = [
+  {
+    id: "AgentMaker",
+    icon: <Bot className="w-6 h-6" />,
+    title: "Agent Maker",
+    description: "Crafts and refines system prompts for other agents.",
+    tools: ["memory", "web_search"],
+    color: "from-violet-500 to-purple-500",
+    bg: "bg-violet-50",
+    text: "text-violet-600",
+  },
+  {
+    id: "DeepResearchAgent",
+    icon: <Search className="w-6 h-6" />,
+    title: "Deep Research",
+    description: "Evidence-based research with web search and browsing.",
+    tools: ["memory", "web_search", "browser"],
+    color: "from-sky-500 to-cyan-500",
+    bg: "bg-sky-50",
+    text: "text-sky-600",
+  },
+  {
+    id: "Document",
+    icon: <FileText className="w-6 h-6" />,
+    title: "Document Writer",
+    description: "Sharp, analytical writing for docs and reports.",
+    tools: ["memory", "web_search", "file_editing"],
+    color: "from-emerald-500 to-teal-500",
+    bg: "bg-emerald-50",
+    text: "text-emerald-600",
+  },
+  {
+    id: "Engineer",
+    icon: <Code className="w-6 h-6" />,
+    title: "Software Engineer",
+    description: "Codes, debugs, and analyzes repositories end-to-end.",
+    tools: ["memory", "code_analysis", "file_editing", "commands"],
+    color: "from-amber-500 to-orange-500",
+    bg: "bg-amber-50",
+    text: "text-amber-600",
+  },
+  {
+    id: "HtmlAgent",
+    icon: <Palette className="w-6 h-6" />,
+    title: "HTML & 3D",
+    description: "Builds interactive web apps and 3D scenes in one file.",
+    tools: ["memory", "code_analysis", "file_editing", "browser"],
+    color: "from-indigo-500 to-blue-500",
+    bg: "bg-indigo-50",
+    text: "text-indigo-600",
+  },
+  {
+    id: "PresentationAgent",
+    icon: <Presentation className="w-6 h-6" />,
+    title: "Presenter",
+    description: "Creates Slidev presentations for technical audiences.",
+    tools: ["memory", "web_search", "file_editing", "commands"],
+    color: "from-rose-500 to-pink-500",
+    bg: "bg-rose-50",
+    text: "text-rose-600",
+  },
+];
 
+const UseCases = () => {
   const downloadAgent = (agentId: string) => {
     const link = document.createElement("a");
     link.href = `/agents/${agentId}.toml`;
@@ -125,127 +82,89 @@ const UseCases = () => {
     document.body.removeChild(link);
   };
 
-  const enabledAgents = agents.filter((agent) => agent.enabled);
-
   return (
-    <section id="use-cases" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
+    <section id="use-cases" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Example AI Agents to Inspire Your Workflows
+            Ready-Made Agents
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
-            Explore these sample agents to understand how AgentCrew works. Use
-            them as-is or as blueprints to create custom agents tailored to your
-            specific needs and workflows.
-          </p>
-          <p className="text-base text-gray-500 max-w-2xl mx-auto">
-            Download any configuration, modify it, or build entirely new agents
-            based on these examples.
+          <p className="text-lg text-gray-600 max-w-xl mx-auto">
+            Download, customize, or use these as blueprints for your own team.
           </p>
         </div>
 
-        {/* Agents Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {enabledAgents.map((agent, index) => (
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {agents.map((agent, i) => (
             <div
-              key={index}
-              className="bg-white rounded-2xl border border-gray-200 shadow-lg card-hover overflow-hidden"
+              key={i}
+              className="group bg-white rounded-2xl border border-gray-100 shadow-sm card-hover overflow-hidden"
             >
-              {/* Header */}
-              <div className={`bg-gradient-to-r ${agent.color} p-6 text-white`}>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center space-x-4">
-                    <div className="p-2 bg-white/20 rounded-lg">
-                      {agent.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold">{agent.title}</h3>
-                      <p className="text-white/80 text-sm">{agent.audience}</p>
-                    </div>
+              {/* Top gradient strip */}
+              <div
+                className={`h-1.5 bg-gradient-to-r ${agent.color}`}
+              />
+
+              <div className="p-6">
+                {/* Top row: icon + download */}
+                <div className="flex items-start justify-between mb-4">
+                  <div
+                    className={`flex items-center justify-center w-11 h-11 rounded-xl ${agent.bg} ${agent.text}`}
+                  >
+                    {agent.icon}
                   </div>
                   <button
                     onClick={() => downloadAgent(agent.id)}
-                    className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 transition-colors px-3 py-2 rounded-lg text-sm font-medium"
-                    title="Download agent configuration"
+                    className="p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                    title="Download .toml"
                   >
                     <Download className="w-4 h-4" />
-                    <span>Download</span>
                   </button>
                 </div>
-                <p className="text-white/90 leading-relaxed">
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-gray-900 mb-1.5">
+                  {agent.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   {agent.description}
                 </p>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                {/* Use Cases */}
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">
-                    Perfect For:
-                  </h4>
-                  <ul className="space-y-2">
-                    {agent.useCases.map((useCase, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
-                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{useCase}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Built-in Tools */}
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center space-x-2">
-                    <Wrench className="w-4 h-4" />
-                    <span>Built-in Tools</span>
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {agent.tools.map((tool, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
+                {/* Tools */}
+                <div className="flex flex-wrap gap-1.5">
+                  {agent.tools.map((tool, idx) => (
+                    <span
+                      key={idx}
+                      className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-gray-100 text-gray-600"
+                    >
+                      {tool}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Disabled Agents Notice */}
-        {agents.some((agent) => !agent.enabled) && (
-          <div className="bg-gray-50 rounded-lg p-6 mb-16">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Coming Soon
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Additional agents are in development and will be available soon:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {agents
-                .filter((agent) => !agent.enabled)
-                .map((agent, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center space-x-3 text-gray-500"
-                  >
-                    {agent.icon}
-                    <span className="font-medium">{agent.title}</span>
-                  </div>
-                ))}
-            </div>
-          </div>
-        )}
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <a
+            href="https://github.com/saigontechnology/AgentCrew/tree/main/examples/agents"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
+          >
+            Browse all example agents on GitHub
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
 };
 
 export default UseCases;
-
