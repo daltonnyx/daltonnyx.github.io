@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#071018" />
-    <title>AgentCrew — specialist AI agents that hand work to each other</title>
+    <title>AgentCrew — a crew that hands work off</title>
     <meta
       name="description"
-      content="Open-source agent harness. Architect, coder, and reviewer hand work to each other on the ChatGPT, Copilot, Grok, or local models you already have — no API key."
+      content="A crew of specialist agents on the ChatGPT, Copilot, Grok, or local models you already have. No API key."
     />
     <link rel="canonical" href="https://agentcrew.dev/" />
     <link rel="icon" href="/icons/favicon-32.png" type="image/png" sizes="32x32" />
@@ -19,29 +19,22 @@
     <meta property="og:site_name" content="AgentCrew" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://agentcrew.dev/" />
-    <meta property="og:title" content="AgentCrew — specialist AI agents that hand work to each other" />
+    <meta property="og:title" content="AgentCrew — a crew that hands work off" />
     <meta
       property="og:description"
-      content="A crew of specialist agents on the ChatGPT, Copilot, Grok, or local models you already have. No API key — sign in with a subscription."
+      content="No API key. ChatGPT, Copilot, Grok, or a local model."
     />
     <meta property="og:image" content="https://agentcrew.dev/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="AgentCrew. A crew of specialist AI agents that hand work to each other, on the models you already have."
-    />
+    <meta property="og:image:alt" content="AgentCrew. A crew that hands work off. No API key." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AgentCrew — specialist AI agents that hand work to each other" />
-    <meta
-      name="twitter:description"
-      content="Architect, coder, and reviewer hand work to each other on the ChatGPT, Copilot, Grok, or local models you already have. No API key."
-    />
+    <meta name="twitter:title" content="AgentCrew — a crew that hands work off" />
+    <meta name="twitter:description" content="No API key. ChatGPT, Copilot, Grok, or a local model." />
     <meta name="twitter:image" content="https://agentcrew.dev/og.png" />
-    <meta name="twitter:image:alt" content="AgentCrew. Specialist agents on the models you already have." />
+    <meta name="twitter:image:alt" content="AgentCrew. A crew that hands work off. No API key." />
     <link rel="preload" href="/fonts/outfit-600.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/media/hero-poster.webp" as="image" />
     <link rel="stylesheet" href="/src/styles.css" />
     <script type="application/ld+json">
@@ -57,12 +50,8 @@
         "softwareHelp": "https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md",
         "license": "https://www.apache.org/licenses/LICENSE-2.0",
         "isAccessibleForFree": true,
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "Open-source multi-agent harness. Specialist agents hand work to each other and run on the ChatGPT, Copilot, Grok, or local models you already have.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "A crew of specialist agents that hand work to each other, on the models you already have.",
         "author": {
           "@type": "Organization",
           "name": "Saigon Technology",
@@ -76,562 +65,156 @@
     <header class="site-header">
       <div class="wrap header-bar">
         <a class="brand" href="#top">
-          <img src="/logo.webp" width="36" height="36" alt="" />
+          <img src="/logo.webp" width="32" height="32" alt="" />
           <span>AgentCrew</span>
         </a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <span class="nav-toggle-bars" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-        <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a href="#crew">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#providers">Providers</a>
-          <a href="#quickstart">Quickstart</a>
-          <a
-            href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Docs</a
-          >
-          <a class="nav-star" href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14">
-              <path
-                fill="currentColor"
-                d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"
-              />
-            </svg>
-            Star
-          </a>
+        <nav class="header-links" aria-label="Primary">
+          <a href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">Docs</a>
         </nav>
       </div>
     </header>
 
     <main id="content">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="wrap">
-          <p class="eyebrow">
-            <span class="pulse" aria-hidden="true"></span>
-            No API key. Use the subscription you already pay for.
-          </p>
-          <h1 id="hero-title">A crew of specialist AI agents that hand work to each other.</h1>
-          <p class="lede">
-            Running on the ChatGPT, Copilot, Grok, or local models you already have.
-            AgentCrew is a harness you run, not a library you assemble.
-          </p>
-          <p class="roles">
-            <span>Architect</span>
-            <span class="role-arrow" aria-hidden="true">→</span>
-            <span>Coder</span>
-            <span class="role-arrow" aria-hidden="true">⇄</span>
-            <span>Reviewer</span>
-          </p>
-
-          <div class="hero-stage">
-            <figure class="player hero-player" data-player>
-              <div class="frame">
-                <video
-                  id="hero-video"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  poster="/media/hero-poster.webp"
-                  width="1318"
-                  height="882"
-                  preload="metadata"
-                  aria-label="30 second demo. One prompt goes from Architect to Coder to Reviewer, then an animated ASCII solar system runs in the terminal."
-                >
-                  <source src="/media/hero-demo.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <figcaption class="player-bar">
-                <span>30s · silent · one prompt, two fix rounds, then approval</span>
-                <button type="button" class="player-toggle" data-toggle aria-pressed="false">
-                  <span data-label>Play</span>
-                  <span class="sr-only"> the demo</span>
-                </button>
-              </figcaption>
-            </figure>
-
-            <div class="quickstart" id="quickstart">
-              <div class="qs-head">
-                <h2>Three commands</h2>
-                <div class="tabs" role="tablist" aria-label="Subscription to sign in with">
-                  <button type="button" role="tab" id="tab-xai" aria-selected="true" aria-controls="qs-panel" tabindex="0" data-provider="xai">
-                    xAI
-                  </button>
-                  <button type="button" role="tab" id="tab-chatgpt" aria-selected="false" aria-controls="qs-panel" tabindex="-1" data-provider="chatgpt">
-                    ChatGPT
-                  </button>
-                  <button type="button" role="tab" id="tab-copilot" aria-selected="false" aria-controls="qs-panel" tabindex="-1" data-provider="copilot">
-                    Copilot
-                  </button>
-                </div>
-              </div>
-              <div role="tabpanel" id="qs-panel" aria-labelledby="tab-xai">
-                <ol class="cmds">
-                  <li><code>pip install agentcrew-ai</code></li>
-                  <li><code>agentcrew xai-auth</code></li>
-                  <li><code>agentcrew chat --provider xai</code></li>
-                </ol>
-                <p class="qs-note" id="qs-note">
-                  Device login for an eligible xAI plan. xAI controls allowances and billing — a displayed token cost of 0.0 does not mean the request is free.
-                </p>
-              </div>
-              <div class="qs-actions">
-                <button type="button" class="button button-primary" id="copy-commands">Copy</button>
-                <p class="qs-status" id="copy-status" role="status" aria-live="polite"></p>
-              </div>
-              <p class="qs-foot">
-                Opens the desktop app. Add <code>--console</code> for the terminal. The first launch walks you through creating an agent.
-              </p>
-            </div>
-          </div>
-          <p class="hero-caption">
-            Recorded on Grok 4.7 through an xAI subscription. The Architect specs an animated ASCII solar system, the Coder writes it, and the Reviewer sends two rounds of fixes before approving. The clip ends with <code>solar.py</code> running in the terminal.
-          </p>
-          <p class="alt-install">Or the shell installer from the docs:</p>
-          <pre class="installer"><code>curl -LsSf https://agentcrew.dev/install.sh | bash</code></pre>
-          <p class="alt-install">
-            macOS and Linux. On Windows, run
-            <a href="/install.ps1">install.ps1</a>.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="crew" aria-labelledby="crew-title">
-        <div class="wrap">
-          <p class="kicker">The crew</p>
-          <h2 id="crew-title">How the crew works</h2>
-          <p class="section-lede">
-            You stay in one conversation. Each specialist has its own tools and instructions, and hands the task across when the work changes.
-          </p>
-          <ol class="steps">
-            <li>
-              <span class="step-index">01</span>
-              <h3>Architect</h3>
-              <p>Weighs trade-offs and writes the approach before a line of code.</p>
-            </li>
-            <li>
-              <span class="step-index">02</span>
-              <h3>Coder</h3>
-              <p>Picks up the handoff with that context and implements it, using its own tools.</p>
-            </li>
-            <li>
-              <span class="step-index">03</span>
-              <h3>Reviewer</h3>
-              <p>Checks the result, sends fixes back, and approves when it holds.</p>
-            </li>
-          </ol>
-
-          <div class="split">
-            <div class="panel">
-              <h3>The handoff</h3>
-              <p>
-                <code>/agent</code> switches who you are talking to. <code>@Name</code> hands a subtask to another agent, with the conversation’s context. Names are the agents in your crew.
-              </p>
-              <pre class="handoff"><code>/agent Architect
-Design the approach.
-
-@Coder Implement the plan.
-
-@Reviewer Review the result.</code></pre>
-            </div>
-            <div class="panel">
-              <h3>Where it runs</h3>
-              <dl class="modes">
-                <div>
-                  <dt>Desktop</dt>
-                  <dd><code>agentcrew chat</code></dd>
-                </div>
-                <div>
-                  <dt>Terminal</dt>
-                  <dd><code>agentcrew chat --console</code></dd>
-                </div>
-                <div>
-                  <dt>One-shot job</dt>
-                  <dd><code>agentcrew job</code></dd>
-                </div>
-                <div>
-                  <dt>HTTP API</dt>
-                  <dd><code>agentcrew a2a-server</code> — another AgentCrew can delegate over A2A.</dd>
-                </div>
-                <div>
-                  <dt>Editors and custom clients</dt>
-                  <dd>ACP is the WebSocket protocol for IDE integrations and headless control.</dd>
-                </div>
-              </dl>
-            </div>
+        <div class="wrap hero-copy">
+          <h1 id="hero-title">A crew that hands work off.</h1>
+          <p class="sub">No API key. ChatGPT, Copilot, Grok, or a local model.</p>
+          <div class="actions">
+            <a class="button button-primary" href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="button button-ghost" href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">Docs</a>
           </div>
         </div>
-      </section>
 
-      <section class="section" id="features" aria-labelledby="features-title">
-        <div class="wrap">
-          <p class="kicker">What persists</p>
-          <h2 id="features-title">The crew keeps what it learns</h2>
-          <p class="section-lede">
-            Four parts of AgentCrew outlive the chat. Each film is silent, about half a minute, and plays when it scrolls into view.
-          </p>
-
-          <div class="feature-list">
-            <article class="feature" id="memory">
-              <div class="feature-copy">
-                <p class="kicker"><span>01</span> Memory</p>
-                <h3>It remembers the job, per agent.</h3>
-                <p>
-                  After every turn, a background worker turns the chat into a structured memory. Memories are saved locally in SQLite at <code>~/.AgentCrew/memory.db</code>, scoped to that agent, and kept across sessions.
-                </p>
-                <p>
-                  Next session, the relevant memory comes back with the agent. The Architect’s decision does not automatically become the Coder’s — say it again in the handoff if the next agent needs it.
-                </p>
-                <p>
-                  <a href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_WORKFLOWS.md" target="_blank" rel="noopener noreferrer">How memory is scoped</a>
-                </p>
-              </div>
-              <figure class="player" data-player>
-                <div class="frame">
-                  <video
-                    class="wide"
-                    poster="/media/memory-poster.webp"
-                    width="1280"
-                    height="720"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/memory.mp4"
-                    aria-label="Explainer: AgentCrew memory. A turn becomes a structured memory, stored locally per agent."
-                  ></video>
-                  <video
-                    class="square"
-                    poster="/media/memory-poster-square.webp"
-                    width="840"
-                    height="840"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/memory-square.mp4"
-                    aria-label="Explainer: AgentCrew memory. A turn becomes a structured memory, stored locally per agent."
-                  ></video>
-                </div>
-                <figcaption class="player-bar">
-                  <span>Memory · 32s · silent</span>
-                  <button type="button" class="player-toggle" data-toggle aria-pressed="false">
-                    <span data-label>Play</span>
-                    <span class="sr-only"> memory explainer</span>
-                  </button>
-                </figcaption>
-              </figure>
-            </article>
-
-            <article class="feature" id="learn">
-              <div class="feature-copy">
-                <p class="kicker"><span>02</span> /learn</p>
-                <h3>Teach a rule once.</h3>
-                <p>
-                  A behavior is a simple rule: when this happens, do that. <code>/learn</code> reads the current conversation and proposes rules. You confirm each one — global, or this project — or you skip it.
-                </p>
-                <p>
-                  Confirmed behaviors live in <code>~/.AgentCrew/persistents/adaptive.json</code> and apply when the condition matches, including on later sessions.
-                </p>
-                <p>
-                  <a href="https://github.com/saigontechnology/AgentCrew/blob/main/CONFIGURATION.md" target="_blank" rel="noopener noreferrer">Adaptive behaviors</a>
-                </p>
-              </div>
-              <figure class="player" data-player>
-                <div class="frame">
-                  <video
-                    class="wide"
-                    poster="/media/learn-poster.webp"
-                    width="1280"
-                    height="720"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/learn.mp4"
-                    aria-label="Explainer: the /learn command proposes when-then behaviors for you to approve."
-                  ></video>
-                  <video
-                    class="square"
-                    poster="/media/learn-poster-square.webp"
-                    width="840"
-                    height="840"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/learn-square.mp4"
-                    aria-label="Explainer: the /learn command proposes when-then behaviors for you to approve."
-                  ></video>
-                </div>
-                <figcaption class="player-bar">
-                  <span>/learn · 34s · silent</span>
-                  <button type="button" class="player-toggle" data-toggle aria-pressed="false">
-                    <span data-label>Play</span>
-                    <span class="sr-only"> learn explainer</span>
-                  </button>
-                </figcaption>
-              </figure>
-            </article>
-
-            <article class="feature" id="evolve">
-              <div class="feature-copy">
-                <p class="kicker"><span>03</span> /evolve</p>
-                <h3>The system prompt can improve itself.</h3>
-                <p>
-                  <code>/evolve</code> studies an agent’s memory and proposes a revised system prompt: durable traits and output preferences. It starts with three optional questions about how you want that agent to work.
-                </p>
-                <p>
-                  Nothing changes until you accept, edit, or decline. The proposal is a review, not a silent rewrite.
-                </p>
-                <p>
-                  <a href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_WORKFLOWS.md" target="_blank" rel="noopener noreferrer">Command reference</a>
-                </p>
-              </div>
-              <figure class="player" data-player>
-                <div class="frame">
-                  <video
-                    class="wide"
-                    poster="/media/evolve-poster.webp"
-                    width="1280"
-                    height="720"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/evolve.mp4"
-                    aria-label="Explainer: /evolve proposes a revised system prompt from memory, and you accept, edit, or decline."
-                  ></video>
-                  <video
-                    class="square"
-                    poster="/media/evolve-poster-square.webp"
-                    width="840"
-                    height="840"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/evolve-square.mp4"
-                    aria-label="Explainer: /evolve proposes a revised system prompt from memory, and you accept, edit, or decline."
-                  ></video>
-                </div>
-                <figcaption class="player-bar">
-                  <span>/evolve · 34s · silent</span>
-                  <button type="button" class="player-toggle" data-toggle aria-pressed="false">
-                    <span data-label>Play</span>
-                    <span class="sr-only"> evolve explainer</span>
-                  </button>
-                </figcaption>
-              </figure>
-            </article>
-
-            <article class="feature" id="craft-skill">
-              <div class="feature-copy">
-                <p class="kicker"><span>04</span> craft_skill</p>
-                <h3>Save a workflow as a skill.</h3>
-                <p>
-                  Ask an agent to keep a workflow you repeat. <code>craft_skill</code> writes a skill — instructions plus at least one script — into the project’s <code>.agents/skills</code> folder. Scripts can be Python, Bash, PowerShell, or JavaScript.
-                </p>
-                <p>
-                  It checks and saves the skill; it does not run the script. Crafting is offered on a trusted project, to agents that can run commands and edit files. Three skills stay active at once; a fourth sets the oldest aside.
-                </p>
-                <p>
-                  <a href="https://github.com/saigontechnology/AgentCrew/blob/main/docs/skills.md" target="_blank" rel="noopener noreferrer">Project skills</a>
-                </p>
-              </div>
-              <figure class="player" data-player>
-                <div class="frame">
-                  <video
-                    class="wide"
-                    poster="/media/craft-skill-poster.webp"
-                    width="1280"
-                    height="720"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/craft-skill.mp4"
-                    aria-label="Explainer: craft_skill saves a workflow as instructions plus a script in .agents/skills."
-                  ></video>
-                  <video
-                    class="square"
-                    poster="/media/craft-skill-poster-square.webp"
-                    width="840"
-                    height="840"
-                    muted
-                    loop
-                    playsinline
-                    preload="none"
-                    data-src="/media/craft-skill-square.mp4"
-                    aria-label="Explainer: craft_skill saves a workflow as instructions plus a script in .agents/skills."
-                  ></video>
-                </div>
-                <figcaption class="player-bar">
-                  <span>craft_skill · 34s · silent</span>
-                  <button type="button" class="player-toggle" data-toggle aria-pressed="false">
-                    <span data-label>Play</span>
-                    <span class="sr-only"> craft skill explainer</span>
-                  </button>
-                </figcaption>
-              </figure>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="providers" aria-labelledby="providers-title">
-        <div class="wrap">
-          <p class="kicker">Models you already have</p>
-          <h2 id="providers-title">Supported providers</h2>
-          <p class="section-lede">
-            Pick a provider. Model catalogs move; the sign-in does not. Pass <code>--model-id</code> when you want a specific model, or switch later with <code>/model</code>.
-          </p>
-          <div class="provider-grid">
-            <section class="panel">
-              <h3>Subscription, no API key</h3>
-              <ul class="provider-list">
-                <li>
-                  <strong>xAI</strong>
-                  <code>agentcrew xai-auth</code>
-                  <span>then <code>--provider xai</code></span>
-                </li>
-                <li>
-                  <strong>ChatGPT Plus / Pro</strong>
-                  <code>agentcrew chatgpt-auth</code>
-                  <span>then <code>--provider openai_codex</code></span>
-                </li>
-                <li>
-                  <strong>GitHub Copilot</strong>
-                  <code>agentcrew copilot-auth</code>
-                  <span>then <code>--provider github_copilot</code></span>
-                </li>
-                <li>
-                  <strong>OpenCode Go</strong>
-                  <span><code>agentcrew chat --provider opencode_go</code></span>
-                </li>
-                <li>
-                  <strong>Command Code</strong>
-                  <span>Subscription</span>
-                </li>
-              </ul>
-            </section>
-            <section class="panel">
-              <h3>API key</h3>
-              <ul class="provider-list">
-                <li><strong>OpenAI</strong><span>Per-token</span></li>
-                <li><strong>Anthropic</strong><span>Per-token</span></li>
-                <li><strong>Google Gemini</strong><span>Free tier available</span></li>
-                <li><strong>DeepInfra</strong><span>Pay as you go</span></li>
-                <li><strong>Together AI</strong><span>Pay as you go</span></li>
-                <li><strong>Fireworks</strong><span>Pay as you go</span></li>
-                <li><strong>Refuseless</strong><span>API key</span></li>
-              </ul>
-              <p class="fine">
-                Set a key in the environment, or under <code>api_keys</code> in <code>~/.AgentCrew/config.json</code>.
-              </p>
-            </section>
-            <section class="panel">
-              <h3>On your machine</h3>
-              <p>
-                Ollama, llama.cpp, LM Studio, and other OpenAI-compatible endpoints are custom providers in <code>~/.AgentCrew/config.json</code>. Fully local, including air-gapped machines.
-              </p>
-              <p>
-                Cursor Agent is a supported agent type for editing the repository you are in. Files stay on your machine; inference is hosted by Cursor. Set <code>CURSOR_API_KEY</code>, then add a <code>[[cursor_agents]]</code> entry.
-              </p>
-              <p class="fine">
-                <a href="https://github.com/saigontechnology/AgentCrew/blob/main/CONFIGURATION.md" target="_blank" rel="noopener noreferrer">Provider and agent configuration</a>
-              </p>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <section class="section cta" id="repo" aria-labelledby="cta-title">
-        <div class="wrap cta-panel">
-          <p class="kicker">Open source</p>
-          <h2 id="cta-title">Apache 2.0. Read the code, or star it.</h2>
-          <p class="section-lede">
-            AgentCrew is maintained in the open by Saigon Technology. Python 3.12 or newer. The package name is <code>agentcrew-ai</code>.
-          </p>
-          <div class="cta-row">
-            <a class="button button-primary" href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">
-              View the repository
-            </a>
-            <a
-              class="github-button"
-              href="https://github.com/saigontechnology/AgentCrew"
-              data-color-scheme="no-preference: dark; light: dark; dark: dark"
-              data-icon="octicon-star"
-              data-size="large"
-              data-show-count="true"
-              aria-label="Star saigontechnology/AgentCrew on GitHub"
-              >Star</a
+        <figure class="player hero-player" data-player>
+          <div class="frame">
+            <video
+              id="hero-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="/media/hero-poster.webp"
+              width="1318"
+              height="882"
+              preload="metadata"
+              aria-label="Demo. One prompt goes from Architect to Coder to Reviewer, then an animated ASCII solar system runs in the terminal."
             >
-            <a class="button button-ghost" href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">
-              Getting started
-            </a>
+              <source src="/media/hero-demo.mp4" type="video/mp4" />
+            </video>
+            <button type="button" class="player-toggle" data-toggle aria-pressed="false">
+              <span data-label>Play</span>
+              <span class="sr-only"> the demo</span>
+            </button>
           </div>
+        </figure>
+
+        <div class="quickstart" id="quickstart">
+          <div class="tabs" role="tablist" aria-label="Subscription">
+            <button type="button" role="tab" id="tab-xai" aria-selected="true" aria-controls="qs-panel" tabindex="0" data-provider="xai">xAI</button>
+            <button type="button" role="tab" id="tab-chatgpt" aria-selected="false" aria-controls="qs-panel" tabindex="-1" data-provider="chatgpt">ChatGPT</button>
+            <button type="button" role="tab" id="tab-copilot" aria-selected="false" aria-controls="qs-panel" tabindex="-1" data-provider="copilot">Copilot</button>
+          </div>
+          <div class="qs-row" role="tabpanel" id="qs-panel" aria-labelledby="tab-xai">
+            <ol class="cmds">
+              <li><code>pip install agentcrew-ai</code></li>
+              <li><code>agentcrew xai-auth</code></li>
+              <li><code>agentcrew chat --provider xai</code></li>
+            </ol>
+            <button type="button" class="button button-primary" id="copy-commands">Copy</button>
+          </div>
+          <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
         </div>
       </section>
+
+      <section class="crew" aria-labelledby="crew-title">
+        <h2 id="crew-title" class="sr-only">How the crew works</h2>
+        <ol class="nodes">
+          <li>Architect</li>
+          <li>Coder</li>
+          <li>Reviewer</li>
+        </ol>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <h2 id="features-title" class="sr-only">Features</h2>
+
+        <article class="feature" id="memory">
+          <figure class="player" data-player>
+            <div class="frame">
+              <video class="wide" poster="/media/memory-poster.webp" width="1280" height="720" muted loop playsinline preload="none" data-src="/media/memory.mp4" aria-label="Memory. A turn becomes a memory, stored locally for that agent."></video>
+              <video class="square" poster="/media/memory-poster-square.webp" width="840" height="840" muted loop playsinline preload="none" data-src="/media/memory-square.mp4" aria-label="Memory. A turn becomes a memory, stored locally for that agent."></video>
+              <button type="button" class="player-toggle" data-toggle aria-pressed="false">
+                <span data-label>Play</span>
+                <span class="sr-only"> memory</span>
+              </button>
+            </div>
+          </figure>
+          <h3>Per-agent memory</h3>
+          <p>Kept locally, for each agent.</p>
+        </article>
+
+        <article class="feature" id="learn">
+          <figure class="player" data-player>
+            <div class="frame">
+              <video class="wide" poster="/media/learn-poster.webp" width="1280" height="720" muted loop playsinline preload="none" data-src="/media/learn.mp4" aria-label="Learn. The agent proposes a when-then rule, and you approve it."></video>
+              <video class="square" poster="/media/learn-poster-square.webp" width="840" height="840" muted loop playsinline preload="none" data-src="/media/learn-square.mp4" aria-label="Learn. The agent proposes a when-then rule, and you approve it."></video>
+              <button type="button" class="player-toggle" data-toggle aria-pressed="false">
+                <span data-label>Play</span>
+                <span class="sr-only"> learn</span>
+              </button>
+            </div>
+          </figure>
+          <h3>Learn a rule</h3>
+          <p>When this happens, do that.</p>
+        </article>
+
+        <article class="feature" id="evolve">
+          <figure class="player" data-player>
+            <div class="frame">
+              <video class="wide" poster="/media/evolve-poster.webp" width="1280" height="720" muted loop playsinline preload="none" data-src="/media/evolve.mp4" aria-label="Evolve. A revised system prompt, applied only if you approve."></video>
+              <video class="square" poster="/media/evolve-poster-square.webp" width="840" height="840" muted loop playsinline preload="none" data-src="/media/evolve-square.mp4" aria-label="Evolve. A revised system prompt, applied only if you approve."></video>
+              <button type="button" class="player-toggle" data-toggle aria-pressed="false">
+                <span data-label>Play</span>
+                <span class="sr-only"> evolve</span>
+              </button>
+            </div>
+          </figure>
+          <h3>Evolve the prompt</h3>
+          <p>Nothing changes until you approve.</p>
+        </article>
+
+        <article class="feature" id="craft-skill">
+          <figure class="player" data-player>
+            <div class="frame">
+              <video class="wide" poster="/media/craft-skill-poster.webp" width="1280" height="720" muted loop playsinline preload="none" data-src="/media/craft-skill.mp4" aria-label="Craft skill. A repeatable workflow saved into the project."></video>
+              <video class="square" poster="/media/craft-skill-poster-square.webp" width="840" height="840" muted loop playsinline preload="none" data-src="/media/craft-skill-square.mp4" aria-label="Craft skill. A repeatable workflow saved into the project."></video>
+              <button type="button" class="player-toggle" data-toggle aria-pressed="false">
+                <span data-label>Play</span>
+                <span class="sr-only"> craft skill</span>
+              </button>
+            </div>
+          </figure>
+          <h3>Craft a skill</h3>
+          <p>A workflow, saved in the project.</p>
+        </article>
+      </section>
+
+      <p class="providers">xAI · ChatGPT · Copilot · OpenAI · Anthropic · Gemini · local</p>
     </main>
 
     <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <a class="brand" href="#top">
-            <img src="/logo.webp" width="32" height="32" alt="" />
-            <span>AgentCrew</span>
-          </a>
-          <p class="footer-blurb">
-            A harness for a crew of specialist agents. They hand work to each other and run on the models you already have.
-          </p>
-        </div>
-        <div>
-          <h2>Product</h2>
-          <ul>
-            <li><a href="#crew">How it works</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#providers">Providers</a></li>
-            <li><a href="#quickstart">Quickstart</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Docs</h2>
-          <ul>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">Getting started</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_WORKFLOWS.md" target="_blank" rel="noopener noreferrer">Workflows</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/blob/main/CONFIGURATION.md" target="_blank" rel="noopener noreferrer">Configuration</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/blob/main/docs/skills.md" target="_blank" rel="noopener noreferrer">Skills</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew#readme" target="_blank" rel="noopener noreferrer">README</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Project</h2>
-          <ul>
-            <li><a href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://pypi.org/project/agentcrew-ai/" target="_blank" rel="noopener noreferrer">PyPI</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
-            <li><a href="https://github.com/saigontechnology/AgentCrew/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a></li>
-            <li><a href="https://saigontechnology.com/" target="_blank" rel="noopener noreferrer">Saigon Technology</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="wrap footer-end">
-        <p>© <span id="year">2026</span> Saigon Technology. AgentCrew is open source under Apache 2.0.</p>
+      <div class="wrap footer-bar">
+        <span>AgentCrew</span>
+        <nav aria-label="Footer">
+          <a href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">Docs</a>
+          <a href="https://pypi.org/project/agentcrew-ai/" target="_blank" rel="noopener noreferrer">PyPI</a>
+          <a href="https://github.com/saigontechnology/AgentCrew/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a>
+        </nav>
       </div>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
