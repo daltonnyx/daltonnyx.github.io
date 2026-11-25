@@ -79,7 +79,15 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="wrap hero-copy">
           <h1 id="hero-title">A crew that hands work off.</h1>
-          <p class="sub">No API key. ChatGPT, Copilot, Grok, or a local model.</p>
+          <p class="sub">
+            Specialist agents hand work to each other, on the models you already have.
+            No API key — sign in with ChatGPT, Copilot, or Grok, or run a local model.
+          </p>
+          <ul class="chips">
+            <li>No API key</li>
+            <li>Agents hand off</li>
+            <li>Terminal, desktop, or IDE</li>
+          </ul>
           <div class="actions">
             <a class="button button-primary" href="https://github.com/saigontechnology/AgentCrew" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="button button-ghost" href="https://github.com/saigontechnology/AgentCrew/blob/main/GUIDE_GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">Docs</a>
@@ -108,6 +116,9 @@
             </button>
           </div>
         </figure>
+        <p class="demo-note">
+          One prompt, recorded on an xAI subscription: Architect to Coder to Reviewer, then an ASCII solar system in the terminal.
+        </p>
 
         <div class="quickstart" id="quickstart">
           <div class="tabs" role="tablist" aria-label="Subscription">
@@ -127,13 +138,49 @@
         </div>
       </section>
 
-      <section class="crew" aria-labelledby="crew-title">
-        <h2 id="crew-title" class="sr-only">How the crew works</h2>
-        <ol class="nodes">
-          <li>Architect</li>
-          <li>Coder</li>
-          <li>Reviewer</li>
-        </ol>
+      <section class="band why" aria-labelledby="why-title">
+        <div class="wrap">
+          <h2 id="why-title" class="kicker">Why AgentCrew</h2>
+          <ul class="why-grid">
+            <li>
+              <h3>Ready to run</h3>
+              <p>A harness you start, not a library you assemble.</p>
+            </li>
+            <li>
+              <h3>One thread</h3>
+              <p>You stay in the conversation. Specialists take the task.</p>
+            </li>
+            <li>
+              <h3>Your subscription</h3>
+              <p>xAI, ChatGPT, or Copilot. No separate API key.</p>
+            </li>
+            <li>
+              <h3>It stays</h3>
+              <p>Memory, rules, and skills outlive the chat.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band crew" aria-labelledby="crew-title">
+        <div class="wrap">
+          <h2 id="crew-title" class="kicker">The crew</h2>
+          <ol class="nodes">
+            <li>
+              <strong>Architect</strong>
+              <span>Weighs the trade-offs before any code.</span>
+            </li>
+            <li>
+              <strong>Coder</strong>
+              <span>Implements the plan with its own tools.</span>
+            </li>
+            <li>
+              <strong>Reviewer</strong>
+              <span>Checks the work, then approves.</span>
+            </li>
+          </ol>
+          <p class="handoff"><code>@Name</code> hands the task across, with the conversation’s context.</p>
+        </div>
       </section>
 
       <section class="features" id="features" aria-labelledby="features-title">
@@ -150,8 +197,11 @@
               </button>
             </div>
           </figure>
-          <h3>Per-agent memory</h3>
-          <p>Kept locally, for each agent.</p>
+          <div class="feature-copy">
+            <h3>Per-agent memory</h3>
+            <p>After every turn, the chat becomes a structured memory and comes back with that agent next session.</p>
+            <p>It is stored locally in SQLite at <code>~/.AgentCrew/memory.db</code>, scoped to that agent.</p>
+          </div>
         </article>
 
         <article class="feature" id="learn">
@@ -165,8 +215,11 @@
               </button>
             </div>
           </figure>
-          <h3>Learn a rule</h3>
-          <p>When this happens, do that.</p>
+          <div class="feature-copy">
+            <h3>Learn a rule</h3>
+            <p><code>/learn</code> proposes rules from the conversation: when this happens, do that. You confirm each one, or skip it.</p>
+            <p>Scope is global, for every chat, or project, for this one only.</p>
+          </div>
         </article>
 
         <article class="feature" id="evolve">
@@ -180,8 +233,11 @@
               </button>
             </div>
           </figure>
-          <h3>Evolve the prompt</h3>
-          <p>Nothing changes until you approve.</p>
+          <div class="feature-copy">
+            <h3>Evolve the prompt</h3>
+            <p><code>/evolve</code> reads an agent’s memory and proposes a revised system prompt.</p>
+            <p>You accept, edit, or decline. Nothing changes until you do.</p>
+          </div>
         </article>
 
         <article class="feature" id="craft-skill">
@@ -195,12 +251,18 @@
               </button>
             </div>
           </figure>
-          <h3>Craft a skill</h3>
-          <p>A workflow, saved in the project.</p>
+          <div class="feature-copy">
+            <h3>Craft a skill</h3>
+            <p>Ask the agent to save a workflow you repeat. It writes instructions and at least one script.</p>
+            <p>The skill is saved in the project’s <code>.agents/skills</code> folder.</p>
+          </div>
         </article>
       </section>
 
-      <p class="providers">xAI · ChatGPT · Copilot · OpenAI · Anthropic · Gemini · local</p>
+      <div class="providers">
+        <p>xAI · ChatGPT · Copilot · OpenAI · Anthropic · Gemini · local</p>
+        <p>Sign in with a subscription, use an API key, or point at a model on your machine.</p>
+      </div>
     </main>
 
     <footer class="site-footer">
